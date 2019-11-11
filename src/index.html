@@ -5,8 +5,45 @@
     <title>Webpack</title>
     <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
 </head>
+
 <body>
-    <h1>You've opened dist directory, index.html file</h1>
-    <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+  <div class="page">
+    <section class="search">
+      <header class="search__header">
+        <a href="#" class="">NewsAnalyzer</a>
+        <a href="#" class="search__header_link-main">Главная</a>
+        <a href="#" class="search__header_link-about">О проекте</a>
+      </header>
+
+
+      <h1 class="search-title">Что в мире творится?</h1>
+      <h2 class="search-subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю</h2>
+
+
+      <div class="search-field">
+        <button class="">Искать</button>
+      </div>
+
+
+    </section>
+
+
+    <main class="content">
+
+    </main>
+
+
+    <section class="about-author">
+
+    </section>
+
+
+    <header class="header">
+
+    </header>
+
+  </div>
+  <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 </body>
+
 </html>
