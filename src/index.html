@@ -8,32 +8,34 @@
 
 <body>
   <div class="page">
-    <section class="search">
-      <header class="search__header">
-        <a href="#" class="search__header_logo">NewsAnalyzer</a>
-        <a href="#" class="search__header_link-main">Главная</a>
-        <a href="#" class="search__header_link-about">О проекте</a>
+
+    <div class="block">
+
+      <header class="header">
+        <a href="#" class="header__logo">NewsAnalyzer</a>
+        <a href="#" class="header__link_main">Главная</a>
+        <a href="#" class="header__link_about">О проекте</a>
       </header>
 
+      <section class="search">
+        <h1 class="search__title">Что в мире творится?</h1>
+        <h2 class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю</h2>
 
-      <h1 class="search-title">Что в мире творится?</h1>
-      <h2 class="search-subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю</h2>
+        <div class="search-field">
+          <button class="">Искать</button>
+        </div>
+
+      </section>
+
+    </div>
 
 
-      <div class="search-field">
-        <button class="">Искать</button>
-      </div>
-
-
-    </section>
-
-
-    <main class="content">
+    <main class="results">
 
     </main>
 
 
-    <section class="about-author">
+    <section class="author">
 
     </section>
 
@@ -43,6 +45,7 @@
     </header>
 
   </div>
+
   <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 </body>
 

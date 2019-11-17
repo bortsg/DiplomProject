@@ -1,0 +1,25 @@
+.search {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+  margin: auto 160px auto auto;
+  width: 1440px;
+  height: 576px;
+  border: 1px solid blue;
+}
+
+.search__title {
+  margin: 416px 160px 416px auto;
+  width: 608px;
+  height: 128px;
+  line-height: 64px;
+}
+
+
+.search__subtitle {
+  margin: 416px 320px auto auto;
+  width: 545px;
+  height: 48px;
+  line-height: 24px;
+}

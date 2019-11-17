@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Robotslab';
+  src: url('../../fonts/robotoslab-regular-webfont.woff') format('woff');
+}
+
+.block {
+  position: absolute;
+  background-image: url(../../images/background.jpg);
+  background-size: cover;
+  color: white;
+  position: absolute;
+  width: 1440px;
+}
