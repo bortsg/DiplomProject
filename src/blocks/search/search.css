@@ -1,25 +1,31 @@
-.search {
-  display: flex;
-  flex-direction: column;
+@font-face {
+  font-family: 'Robotslab';
+  src: url('../../fonts/robotoslab-regular-webfont.woff') format('woff');
+}
 
-  position: relative;
-  margin: auto 160px auto auto;
+.search {
+  /* display: flex;
+  flex-direction: column; */
+  /* position: relative; */
+  /* margin: auto 160px auto auto; */
   width: 1440px;
   height: 576px;
   border: 1px solid blue;
 }
 
 .search__title {
-  margin: 416px 160px 416px auto;
+  margin: 160px 416px auto 416px;
   width: 608px;
   height: 128px;
+  font-size: 60px;
   line-height: 64px;
 }
 
-
 .search__subtitle {
-  margin: 416px 320px auto auto;
+  /* margin: 320px 479px 208px 416px; */
+  margin-left: 416px;
   width: 545px;
   height: 48px;
+  font-size: 18px;
   line-height: 24px;
 }

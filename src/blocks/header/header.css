@@ -13,3 +13,14 @@
   border: 1px solid red;
 }
 
+.header__logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.header__link_about {
+  position: absolute;
+  right: 220px;
+  top: 30px;
+  font-size: 18px;
+}
