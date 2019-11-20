@@ -8,6 +8,7 @@
   background-image: url(../../images/background.jpg);
   background-size: cover;
   color: white;
-  position: absolute;
   width: 1440px;
+  display: flex;
+  flex-direction: column;
 }

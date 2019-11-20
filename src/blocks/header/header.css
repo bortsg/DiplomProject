@@ -3,11 +3,11 @@
 @import url('./__link/header__link_main.css');
 
 .header {
-  display: flex;
-  flex-direction: row;
-  position: absolute;
-  top: 0;
-  left: 0;
+  /* display: flex;
+  flex-direction: row; */
+  /* position: absolute; */
+  /* top: 0px;
+  left: 0px; */
   width: 1440px;
   height: 80px;
   border: 1px solid red;
@@ -16,11 +16,22 @@
 .header__logo {
   font-size: 20px;
   font-weight: bold;
+  position: absolute;
+  top: 30px;
+  left: 100px;
 }
+
+
+.header__link_main {
+  position: absolute;
+  top: 30px;
+  right: 220px;
+}
+
 
 .header__link_about {
   position: absolute;
-  right: 220px;
+  right: 100px;
   top: 30px;
   font-size: 18px;
 }
