@@ -43,3 +43,9 @@
   font-size: 18px;
   margin: 90px 104px auto 1113px;
 }
+
+.results__show-more {
+  width: 288px;
+  height: 64px;
+  margin: 64px 576px 80px 576px ;
+}
