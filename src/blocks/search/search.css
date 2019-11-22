@@ -11,7 +11,6 @@
   width: 1440px;
   height: 496px;
   border: 1px solid blue;
-  /* margin-top: 80px; */
 }
 
 .search__title {
@@ -23,7 +22,6 @@
 }
 
 .search__subtitle {
-  /* margin: 320px 479px 208px 416px; */
   margin-left: 416px;
   width: 545px;
   height: 48px;
@@ -34,7 +32,6 @@
 .search__field {
   width: 698px;
   height: 64px;
-  /* color: white; */
   margin: auto 416px 80px 416px;
   border: 1px solid white;
   border-radius: 100px;
@@ -48,10 +45,9 @@
   border-radius: 100px;
   width: 168px;
   height: 64px;
-  position: relative;
+  position: absolute;
   right: 0;
-  /* left: 856px;
-  top: 432px; */
+  top:0;
 }
 
 .search__button:hover {

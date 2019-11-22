@@ -1,0 +1,45 @@
+@import url('./news/news.css');
+
+@font-face {
+  font-family: 'Robotslab';
+  src: url('../../fonts/robotoslab-regular-webfont.woff') format('woff');
+}
+
+.results {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: space-between; */
+
+  width: 1440px;
+  height: 1566px;
+  border: 1px solid green;
+  clear:both;
+}
+
+.results__content {
+  /* margin-left: 104px; */
+  /* margin-right: 104px; */
+  /* margin: 64px 104px auto 104px; */
+  /* margin-top: 100px; */
+  /* position:relative; */
+  border: 1px solid pink;
+  margin: 64px 104px auto 104px;
+}
+
+.results__title {
+  /* position:relative; */
+  width: 712px;
+  height: 46px;
+  border: 1px solid green;
+  font-size: 40px;
+  margin: 80px 624px auto 104px;
+}
+
+.results__analytics {
+  position:relative;
+  width: 224px;
+  height: 32px;
+  border: 1px solid green;
+  font-size: 18px;
+  margin: 90px 104px auto 1113px;
+}

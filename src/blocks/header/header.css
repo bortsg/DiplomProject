@@ -8,6 +8,7 @@
   /* position: absolute; */
   /* top: 0px;
   left: 0px; */
+  display:absolute;
   width: 1440px;
   height: 80px;
   border: 1px solid red;

@@ -1,0 +1,37 @@
+.news {
+  position: relative;
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  grid-template-rows:  576px 576px;
+  grid-gap: 16px;
+  /* grid-column-gap: 32px; */
+}
+
+
+.news__item {
+  border: 1px solid black;
+  border-radius: 16px;
+  width: 400px;
+}
+
+.news__item_image {
+  width: 400px;
+  height: 272px;
+}
+
+.news__item_date {
+  margin-left: 24px;
+}
+
+.news__item_title {
+  margin-left: 24px;
+}
+
+.news__item_content {
+  margin-left: 24px;
+}
+
+.news__item_source {
+  margin-left: 24px;
+}
+
