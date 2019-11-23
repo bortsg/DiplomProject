@@ -1,19 +1,38 @@
 @import url('./news/news.css');
 
 @font-face {
-  font-family: 'Robotslab';
+  font-family: 'Robotoslab';
+  font-size: normal;
   src: url('../../fonts/robotoslab-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-size: normal;
+  src: url('../../fonts/roboto-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-size: medium;
+  src: url('../../fonts/roboto-medium-webfont.woff') format('woff');
 }
 
 .results {
   /* display: flex; */
   /* flex-direction: column; */
   /* justify-content: space-between; */
-
+  position: relative;
   width: 1440px;
   height: 1566px;
   border: 1px solid green;
   clear:both;
+  background: #F5F6F7;
+}
+
+.results__header {
+  width: 1440px;
+  height: 127px;
 }
 
 .results__content {
@@ -23,29 +42,46 @@
   /* margin-top: 100px; */
   /* position:relative; */
   border: 1px solid pink;
-  margin: 64px 104px auto 104px;
+  margin: 0px 104px auto 104px;
 }
 
 .results__title {
-  /* position:relative; */
+  position:relative;
+  top: 80px;
+  left: 104px;
   width: 712px;
   height: 46px;
   border: 1px solid green;
   font-size: 40px;
-  margin: 80px 624px auto 104px;
+  font-family: 'Robotoslab';
 }
 
 .results__analytics {
   position:relative;
+  top: 58px;
+  left: 1124px;
+  /* right:104px; */
   width: 224px;
   height: 32px;
   border: 1px solid green;
   font-size: 18px;
-  margin: 90px 104px auto 1113px;
+  line-height: 24px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  /* margin: 90px 104px auto 1113px; */
 }
 
 .results__show-more {
   width: 288px;
   height: 64px;
   margin: 64px 576px 80px 576px ;
+  background-color: white;
+  border: none;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
 }

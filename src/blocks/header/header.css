@@ -1,38 +1,63 @@
-@import url('./__logo/header__logo.css');
-@import url('./__link/header__link_about.css');
-@import url('./__link/header__link_main.css');
+@font-face {
+  font-family: 'Robotoslab';
+  font-size: normal;
+  src: url('../../fonts/robotoslab-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-size: normal;
+  src: url('../../fonts/roboto-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-size: medium;
+  src: url('../../fonts/roboto-medium-webfont.woff') format('woff');
+}
+
 
 .header {
-  /* display: flex;
-  flex-direction: row; */
-  /* position: absolute; */
-  /* top: 0px;
-  left: 0px; */
-  display:absolute;
   width: 1440px;
   height: 80px;
-  border: 1px solid red;
 }
 
 .header__logo {
-  font-size: 20px;
-  font-weight: bold;
   position: absolute;
   top: 30px;
   left: 100px;
+  font-family: 'Robotoslab';
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF;
 }
 
 
-.header__link_main {
-  position: absolute;
-  top: 30px;
-  right: 220px;
-}
-
-
-.header__link_about {
+.header__link {
   position: absolute;
   right: 100px;
   top: 30px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
   font-size: 18px;
+  line-height: 24px;
+  color: #B6BCBF;
+  text-decoration: none;
 }
+
+.header__link_active {
+  position: absolute;
+  top: 30px;
+  right: 220px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+
+

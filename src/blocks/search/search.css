@@ -1,6 +1,19 @@
 @font-face {
-  font-family: 'Robotslab';
+  font-family: 'Robotoslab';
+  font-size: normal;
   src: url('../../fonts/robotoslab-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-size: normal;
+  src: url('../../fonts/roboto-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-size: medium;
+  src: url('../../fonts/roboto-medium-webfont.woff') format('woff');
 }
 
 .search {
@@ -10,30 +23,40 @@
   /* margin: auto 160px auto auto; */
   width: 1440px;
   height: 496px;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
+
+
 }
 
 .search__title {
-  margin: 160px 416px auto 416px;
+  margin: 80px 416px auto 416px;
   width: 608px;
   height: 128px;
+
+  font-family: 'Robotoslab';
+  font-style: normal;
+  font-weight: normal;
   font-size: 60px;
   line-height: 64px;
 }
 
 .search__subtitle {
-  margin-left: 416px;
-  width: 545px;
+  width: 550px;
   height: 48px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
   font-size: 18px;
   line-height: 24px;
+  margin: 32px 476px 64px 416px;
+  color: #FFFFFF;
 }
 
 .search__field {
   width: 698px;
   height: 64px;
   margin: auto 416px 80px 416px;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   border-radius: 100px;
   position: relative;
 }
@@ -48,6 +71,12 @@
   position: absolute;
   right: 0;
   top:0;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
 }
 
 .search__button:hover {
@@ -59,4 +88,12 @@
   height: 100%;
   border-radius: 100px;
   padding-left: 24px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  /* margin-bottom: 80px; */
+  /* margin: 0 416px 80px 416px; */
 }
