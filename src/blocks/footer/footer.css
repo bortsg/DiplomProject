@@ -1,0 +1,79 @@
+@import url('./links/links.css');
+
+@font-face {
+  font-family: 'Roboto';
+  font-size: medium;
+  src: url('../../fonts/roboto-medium-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-size: medium;
+  src: url('../../fonts/source-sans-pro-regular.woff') format('woff');
+}
+
+.footer {
+  width: 1440px;
+  height: 80px;
+  background: #FFFFFF;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer__copyright {
+  width: 200px;
+  height: 22px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #B6BCBF;
+  margin: 33px 240px 25px 104px;
+}
+
+.footer__links {
+  width: 400px;
+  height: 22px;
+  margin: 30px auto 28px 0;
+  /* border: 1px solid green; */
+  display: flex;
+  justify-content: space-between;
+
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #1A1B22;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer__icons {
+  width: 74px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__icons_gh {
+  background-image: url('../../images/image_08.jpg');
+}
+
+.footer__icons_gh:hover {
+  fill: #913399;
+}
+
+.footer__icons_fb:hover {
+  fill: #3B5998;
+}
+
+
+
+
+
