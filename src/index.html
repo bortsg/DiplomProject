@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>NewsAnalyzer</title>
     <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css%>">
-    <link rel="icon" href="./images/favicon.png">
+    <link rel="icon" href="<%=require('./images/favicon.png')%>" type="image/png">
 </head>
 
 <body>
@@ -28,6 +28,18 @@
         </form>
       </section>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <main class="results">
@@ -105,7 +117,17 @@
 
 
     <section class="author">
-      
+
+      <img src="${require('./images/avatar.jpg')}" alt="" class="author__avatar">
+
+      <div class="author__info">
+        <h3 class="">Об авторе</h3>
+        <p>Это блок с описаением автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь,
+          какими технологиями разработки владете.</p>
+        <p>Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь
+          потенциальным заказчикам.</p>
+      </div>
+
     </section>
 
   </div>
