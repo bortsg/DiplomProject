@@ -1,4 +1,3 @@
-@import url('./links/links.css');
 
 @font-face {
   font-family: 'Roboto';
@@ -37,7 +36,8 @@
 .footer__links {
   width: 400px;
   height: 22px;
-  margin: 30px auto 28px 0;
+  /* margin-top: 30px; */
+  /* margin-bottom: 28px; */
   /* border: 1px solid green; */
   display: flex;
   justify-content: space-between;
@@ -56,22 +56,41 @@
 }
 
 .footer__icons {
-  width: 74px;
+  width: 72px;
   display: flex;
   justify-content: space-between;
+  position: relative;
+  left: 104px;
+
 }
 
 .footer__icons_gh {
-  background-image: url('../../images/image_08.jpg');
+  width: 24px;
+  height: 24px;
+  background-image: url('../../images/github-icon.png');
+  background-size: contain;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
 }
 
-.footer__icons_gh:hover {
+
+.footer__icons_fb {
+  width: 24px;
+  height: 24px;
+  background-image: url('../../images/facebook-icon.png');
+  background-size: contain;
+  margin-top: 28px;
+  margin-bottom: 28px;
+}
+
+/* .footer__icons_gh:hover {
   fill: #913399;
 }
 
 .footer__icons_fb:hover {
   fill: #3B5998;
-}
+} */
 
 
 
