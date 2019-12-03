@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>NewsAnalyzer</title>
-    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css%>">
-    <link rel="icon" href="<%=require('./images/favicon.png')%>" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NewsAnalyzer</title>
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css%>">
+  <link rel="icon" href="<%=require('./images/favicon.png')%>" type="image/png">
 </head>
 
 <body>
@@ -13,13 +14,13 @@
     <div class="block">
       <header class="header">
         <a href="" class="header__logo">NewsAnalyzer</a>
-        <a href="./index.html" class="header__link header__link_active">Главная</a>
-        <a href="./index.html" class="header__link header__link_inactive">О проекте</a>
+        <a href="./index.html" class="header__link header__link_main  header__link_state_active">Главная</a>
+        <a href="./about.html" class="header__link header__link_about header__link_state_inactive">О проекте</a>
       </header>
 
       <section class="search">
         <h1 class="search__title">Что в мире творится?</h1>
-        <p class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была
+        <p class="search__subtitle ">Введите в поиске любую тему и узнайте, насколько популярной она была
           в новостях за прошедшую неделю</p>
 
         <form class="search__field">
@@ -30,8 +31,16 @@
     </div>
 
 
+    <!-- <section class="preloader">
+      <i class="preloader__circle"></i> -->
+      <!-- <p class="preloader__text">Идет поиск новостей...</p> -->
+    <!-- </section> -->
 
 
+    <!-- <section class="not-found">
+        <h2 class="not-found__title">Ничего не найдено</h2>
+        <h3 class="not-found__subtitle">К сожалению по вашему запросу ничего не найдено.</h3>
+    </section> -->
 
 
 
@@ -45,7 +54,7 @@
     <main class="results">
       <div class="results__header">
         <h2 class="results__title">Результаты поиска</h2>
-        <a href="./index.html" class="results__analytics">Посмотреть аналитику ></a>
+        <a href="./analytics.html" class="results__analytics">Посмотреть аналитику ></a>
       </div>
 
       <section class="results__content news">
@@ -117,7 +126,11 @@
 
 
     <section class="author">
-      <img src="${require('./images/avatar.jpg')}" alt="" class="author__avatar">
+      <picture>
+        <source srcset="${require('./images/avatar.jpg')}">
+        <img src="${require('./images/avatar.jpg')}" alt="" class="author__avatar">
+      </picture>
+
 
       <div class="author__info">
         <h2 class="author__title">Об авторе</h2>

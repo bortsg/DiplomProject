@@ -16,6 +16,12 @@
   src: url('../../fonts/roboto-medium-webfont.woff') format('woff');
 }
 
+@font-face {
+  font-family: 'Robotoslab';
+  font-size: bold;
+  src: url('../../fonts/RobotoSlab-Bold.woff') format('woff');
+}
+
 
 .header {
   width: 1440px;
@@ -48,7 +54,7 @@
   text-decoration: none;
 }
 
-.header__link_active {
+.header__link_main {
   position: absolute;
   top: 30px;
   right: 220px;
@@ -59,6 +65,20 @@
   color: #FFFFFF;
   text-decoration: none;
 }
+
+/* .header__link_about {
+
+} */
+
+.header__link_state_active {
+  border-bottom: 3px solid;
+}
+
+
+.header__link_state_inactive {
+  color: #B6BCBF;
+}
+
 
 
 

@@ -58,7 +58,7 @@
 
 .results__analytics {
   position:relative;
-  top: 58px;
+  top: 24px;
   left: 1124px;
   /* right:104px; */
   width: 224px;
@@ -76,7 +76,7 @@
   width: 288px;
   height: 64px;
   margin: 64px 576px 80px 576px ;
-  background-color: white;
+  background-color: #FFFFFF;
   border: none;
 
   font-family: 'Roboto';
@@ -84,4 +84,9 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
+}
+
+.results__show-more:hover {
+  background-color: #FFFFFF;
+  opacity: 0.8;
 }

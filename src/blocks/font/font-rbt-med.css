@@ -3,3 +3,8 @@
   font-weight: normal;
   src: url('../../fonts/roboto-medium-webfont.woff') format('woff');
 }
+
+.font-rbt-med {
+  font-family: 'Roboto';
+  font-weight: normal;
+}
