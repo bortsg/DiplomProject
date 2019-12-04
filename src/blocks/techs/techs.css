@@ -63,6 +63,7 @@
 .techs__image_html {
   background-image: url('../../images/html.svg');
   background-size: cover;
+  border-color: transparent;
 }
 
 .techs__image_css {
