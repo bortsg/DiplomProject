@@ -24,14 +24,21 @@
   width: 600px;
   height: 153px;
   margin: 93px 216px 88px auto;
-  display: flex;
+  /* display: flex; */
   justify-content: space-between;
+
+  display: grid;
+  grid-template-columns: 120px 120px 120px 120px;
+  grid-template-rows:  153px;
+  grid-gap: 40px;
+  /* margin: 87px auto 0 auto; */
+  /* justify-content: center; */
 }
 
-.techs__element {
+/* .techs__element {
   width: 120px;
   height: 153px;
-}
+} */
 
 .techs__name {
   /* margin-top: 93px; */
@@ -47,7 +54,32 @@
   color: #1A1B22;
 }
 
-.techs__element_html {
+
+.techs__image {
+  width: 120px;
+  height: 120px;
+}
+
+.techs__image_html {
   background-image: url('../../images/html.svg');
   background-size: cover;
 }
+
+.techs__image_css {
+  background-image: url('../../images/css.svg');
+  background-size: cover;
+}
+
+
+.techs__image_js {
+  background-image: url('../../images/js.svg');
+  background-size: cover;
+}
+
+
+.techs__image_wp {
+  background-image: url('../../images/webpack.svg');
+  background-size: cover;
+}
+
+

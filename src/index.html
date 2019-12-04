@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Сайт-анализатор новостей">
+  <meta name="author" content="Тимур Цаган-Манджиев">
   <title>NewsAnalyzer</title>
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css%>">
   <link rel="icon" href="<%=require('./images/favicon.png')%>" type="image/png">
@@ -31,16 +33,18 @@
     </div>
 
 
-    <!-- <section class="preloader">
-      <i class="preloader__circle"></i> -->
-      <!-- <p class="preloader__text">Идет поиск новостей...</p> -->
-    <!-- </section> -->
+    <section class="preloader">
+      <i class="preloader__circle"></i>
+      <p class="preloader__text">Идет поиск новостей...</p>
+    </section>
 
 
-    <!-- <section class="not-found">
-        <h2 class="not-found__title">Ничего не найдено</h2>
-        <h3 class="not-found__subtitle">К сожалению по вашему запросу ничего не найдено.</h3>
-    </section> -->
+
+    <section class="not-found">
+      <img src="${require('./images/not-found.svg')}" class="not-found__image" alt="">
+      <h2 class="not-found__title">Ничего не найдено</h2>
+      <h3 class="not-found__subtitle">К сожалению, по вашему запросу ничего не найдено</h3>
+    </section>
 
 
 
