@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.about.css %>">
   <link rel="icon" href="<%=require('./images/favicon.png')%>" type="image/png">
   <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+  <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
 </head>
 
 <body>
@@ -72,23 +73,84 @@
       </section>
 
       <section class="commit-story">
-        <h2 class="commit-story__title">История коммитов из GitHub</h2>
-        <a href="#" class="commit-story__gh">Открыть в Github ></a>
+        <div class="commit-story__header">
+          <h2 class="commit-story__title">История коммитов из GitHub</h2>
+          <a href="#" class="commit-story__gh">Открыть в Github ></a>
+        </div>
 
         <div class="glide">
 
           <div class="glide__track" data-glide-el="track">
             <ul class="glide__slides">
-              <li class="glide__slide">0</li>
-              <li class="glide__slide">1</li>
-              <li class="glide__slide">2</li>
+
+              <li class="glide__slide phrase-block">
+                <h4 class="phrase-block__date">14 августа, 2019</h4>
+                <div class="phrase-block__ava">
+                  <img src="${require('./images/image-01.png')}" class="phrase-block__photo" alt="">
+                  <p class="phrase-block__name">Антон Долинин</p>
+                  <p class="phrase-block__mail">anton@yandex.ru</p>
+                </div>
+                <p class="phrase-block__text">Emmet (formerly Zen Coding) is a web-
+                  developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
+              </li>
+
+              <li class="glide__slide phrase-block">
+                <h4 class="phrase-block__date">15 августа, 2019</h4>
+                <div class="phrase-block__ava">
+                  <img src="${require('./images/image-01.png')}" class="phrase-block__photo" alt="">
+                  <p class="phrase-block__name">Антон Долинин</p>
+                  <p class="phrase-block__mail">anton@yandex.ru</p>
+                </div>
+                <p class="phrase-block__text">Emmet (formerly Zen Coding) is a web-
+                    developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
+              </li>
+
+              <li class="glide__slide phrase-block">
+                <h4 class="phrase-block__date">16 августа, 2019</h4>
+                <div class="phrase-block__ava">
+                  <img src="${require('./images/image-01.png')}" class="phrase-block__photo" alt="">
+                  <p class="phrase-block__name">Антон Долинин</p>
+                  <p class="phrase-block__mail">anton@yandex.ru</p>
+                </div>
+                <p class="phrase-block__text">Emmet (formerly Zen Coding) is a web-
+                    developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
+              </li>
+
+              <li class="glide__slide phrase-block">
+                <h4 class="phrase-block__date">17 августа, 2019</h4>
+                <div class="phrase-block__ava">
+                  <img src="${require('./images/image-01.png')}" class="phrase-block__photo" alt="">
+                  <p class="phrase-block__name">Антон Долинин</p>
+                  <p class="phrase-block__mail">anton@yandex.ru</p>
+                </div>
+                <p class="phrase-block__text">Emmet (formerly Zen Coding) is a web-
+                    developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
+              </li>
+
+              <li class="glide__slide phrase-block">
+                <h4 class="phrase-block__date">18 августа, 2019</h4>
+                <div class="phrase-block__ava">
+                  <img src="${require('./images/image-01.png')}" class="phrase-block__photo" alt="">
+                  <p class="phrase-block__name">Антон Долинин</p>
+                  <p class="phrase-block__mail">anton@yandex.ru</p>
+                </div>
+                <p class="phrase-block__text">Emmet (formerly Zen Coding) is a web-
+                    developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
+              </li>
+
             </ul>
           </div>
 
-          <div class="glide__arrows" data-glide-el="controls">
-            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
-            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
-          </div>
+          <!-- <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<"> <img src="${require('./images/arrow-left.svg')}"> </button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><img src="${require('./images/arrow-right.svg')}"> </button>
+          </div> -->
+
+          <!-- <div class="glide__bullets" data-glide-el="controls[nav]">
+            <button class="glide__bullet" data-glide-dir="=0"> f</button>
+            <button class="glide__bullet" data-glide-dir="=1">f </button>
+            <button class="glide__bullet" data-glide-dir="=2"> f</button>
+          </div> -->
 
         </div>
       </section>
@@ -117,7 +179,24 @@
   <script src="<%= htmlWebpackPlugin.files.chunks.about.entry %>"></script>
   <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
   <script>
-    new Glide('.glide').mount()
+
+    // const config = {
+    //   type: 'slider',
+    //   startAt: 0,
+    //   perView: 3.5,
+    // }
+
+    // new Glide('.glide',config).mount()
+
+    new Glide('.glide', {
+      type: 'slider',
+      // Anchors: ,
+      // focusAt: 0,
+      startAt: 0,
+      perView: 3.5,
+      // peek: 88
+      // slidestoshow: 3.
+    }).mount()
   </script>
 </body>
 </html>

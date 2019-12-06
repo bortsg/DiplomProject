@@ -1,1 +1,57 @@
 
+.glide {
+  width: 100px;
+  height: 288px;
+  border: 1px solid blue;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* padding: 15px; */
+}
+
+
+.glide__track {
+  width: 100%;
+  /* border: 1px solid blue; */
+  align-items: center;
+  justify-content: center;
+}
+
+.glide__slides {
+  width: 400px;
+  height: 288px;
+  margin-top: 0;
+}
+
+.glide__arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: transparent;
+  /* display: none; */
+  color: transparent;
+}
+
+.glide__bullets {
+  width: 40px;
+  height: 8px;
+  display: flex;
+	justify-content: center;
+	bottom: 0;
+}
+
+/* .glide__bullet {
+	background-color: #dbdbdb;
+	border-radius: 50%;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	padding: 5px;
+	box-shadow: unset;
+	border: unset;
+	max-width: 10px;
+	margin: 0 1px;
+	border: solid 1px transparent;
+	transition: transform 0.3s ease-out;
+} */

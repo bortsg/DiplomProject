@@ -1,0 +1,41 @@
+.phrase-block {
+  width: 400px;
+  height: 288px;
+  border: 1px solid green;
+}
+
+.phrase-block__ava {
+  border: 1px solid brown;
+  width: 400px;
+  height: 64px;
+  display: grid;
+
+  grid-template-columns: 64px 1fr;
+  grid-template-rows:  64px;
+  grid-template-areas:
+  "photo name"
+  "photo mail";
+  /* grid-row-gap: 45px; */
+  grid-column-gap: 16px;
+  /* margin-bottom: calc(72px + 30px); */
+  justify-content: center;
+}
+
+.phrase-block__name {
+  width: 320px;
+  height: 30px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.phrase-block__mail {
+  width: 320px;
+  height: 22px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.phrase-block__text {
+
+}
+
