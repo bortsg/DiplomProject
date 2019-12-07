@@ -25,6 +25,11 @@
   margin-top: 0;
 }
 
+.glide__slide {
+  background: #FFFFFF;
+}
+
+
 .glide__arrow {
   width: 40px;
   height: 40px;

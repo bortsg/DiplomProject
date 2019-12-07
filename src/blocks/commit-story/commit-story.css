@@ -26,8 +26,8 @@
 }
 
 .commit-story__gh {
-  width: 178px;
-  height: 32px;
+  width: 160px;
+  height: 24px;
   margin: 0 104px 68px auto;
   text-decoration: none;
   color: #1A1B22;
@@ -36,4 +36,6 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
+
+
 }

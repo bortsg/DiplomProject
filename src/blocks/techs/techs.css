@@ -41,8 +41,8 @@
 } */
 
 .techs__name {
-  /* margin-top: 93px; */
-  /* margin-bottom: 9px; */
+  margin-top: 0;
+  margin-bottom: 9px;
 
   font-family: 'Roboto';
   font-style: normal;
@@ -58,12 +58,15 @@
 .techs__image {
   width: 120px;
   height: 120px;
+
+  /* color: #F5F6F7; */
 }
 
 .techs__image_html {
   background-image: url('../../images/html.svg');
-  background-size: cover;
-  border-color: transparent;
+  background-size: auto;
+  /* border-color: transparent; */
+  /* box-shadow: red; */
 }
 
 .techs__image_css {
