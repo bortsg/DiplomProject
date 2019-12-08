@@ -1,0 +1,85 @@
+.analytics {
+  color: black;
+  max-width: 1440px;
+}
+
+.analytics__links {
+  width: 712px;
+  height: 24px;
+  margin-top: 40px;
+  margin-left: 104px;
+
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1A1B22;
+
+}
+
+.analytics__link {
+  text-decoration: none;
+}
+
+.analytics__link_state_active {
+  /* border-bottom: 3px solid; */
+  /* text-decoration: none; */
+}
+
+.analytics__link_state_inactive {
+  color: #B6BCBF;
+}
+
+.analytics__summary {
+  margin-left: 104px;
+}
+
+.analytics__title {
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46px;
+  color: #1A1B22;
+  margin-top: 80px;
+  margin-bottom: 24px;
+}
+
+.analytics__per-week {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1A1B22;
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+.analytics__per-week_volume {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1A1B22;
+}
+
+.analytics__mentions {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1A1B22;
+  margin-top: 0;
+  margin-bottom: 80px;
+}
+
+.analytics__mentions_volume {
+  font-weight: bold;
+}
+
+
