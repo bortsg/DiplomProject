@@ -28,7 +28,10 @@
   margin-top: 48px;
   display: flex;
   flex-direction: row;
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  /* margin-bottom: 15px; */
+  border-bottom: 1px solid #1A1B22;
+
 }
 
 .diagram__column-name {
@@ -42,7 +45,7 @@
   color: #B6BCBF;
   width: 60px ;
   margin-top: 0;
-  margin-bottom: 0;
+  /* margin-bottom: 0; */
   margin-right: 44px;
   border: 1px solid blue;
 
@@ -50,6 +53,8 @@
   height: 100%;
   text-align: start;
   /* display: inline; */
+
+  margin-bottom: 16px;
 }
 
 .diagram__row-name {
@@ -74,13 +79,16 @@
 .diagram__row-values {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: calc((100%-104px)/4);
   border: 1px solid green;
+  margin-left: 104px;
+  width: calc(100% - 104px);
+  padding-top: 16px;
 }
 
 .diagram__row-value {
   margin-top: 0;
   margin-bottom: 0;
-
+  color: #B6BCBF;
 }
