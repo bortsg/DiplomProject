@@ -47,7 +47,7 @@
   margin-top: 0;
   /* margin-bottom: 0; */
   margin-right: 44px;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 
   /* height: 40px; */
   height: 100%;
@@ -72,7 +72,7 @@
   margin-left: 0;
   margin-top: 0;
   margin-bottom: 0;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   /* display: inline; */
 }
 
@@ -81,7 +81,7 @@
   flex-direction: row;
   justify-content: space-between;
   width: calc((100%-104px)/4);
-  border: 1px solid green;
+  /* border: 1px solid green; */
   margin-left: 104px;
   width: calc(100% - 104px);
   padding-top: 16px;
@@ -90,5 +90,40 @@
 .diagram__row-value {
   margin-top: 0;
   margin-bottom: 0;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
   color: #B6BCBF;
+}
+
+.diagram__chart {
+  /* display: grid;
+  grid-template-areas:
+  "date value"
+  "date value"
+  "date value"
+  "date value"
+  "date value"
+  "date value"; */
+  display: flex;
+  flex-direction: column;
+}
+
+.diagram__pair {
+  display: flex;
+  flex-direction: row;
+}
+
+.diagram__date {
+  grid-area: date;
+}
+
+.diagram__value {
+  grid-area: value;
 }
