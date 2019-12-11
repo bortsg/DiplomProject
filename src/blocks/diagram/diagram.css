@@ -115,15 +115,78 @@
   flex-direction: column;
 }
 
-.diagram__pair {
+.diagram__pair-date-value {
   display: flex;
   flex-direction: row;
 }
 
 .diagram__date {
   grid-area: date;
+  width: 104px;
+  height: 24px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 80px;
 }
 
 .diagram__value {
   grid-area: value;
+  margin-left: 0px;
+  background: #2F71E5;
+  color: white;
+  /* width: calc(100%-104px); */
+  height: 24px;
+
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  /* or 133% */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+
+
+}
+
+.diagram__value_mnd {
+  /* width: 184px; */
+  width: calc((100% - 104px)*0.15);
+}
+
+.diagram__value_tsd {
+  /* width: 184px; */
+  width: calc((100% - 104px)*0.18);
+}
+
+.diagram__value_wdnsd {
+  /* width: 184px; */
+  width: calc((100% - 104px)*0.11);
+}
+
+.diagram__value_thrsd {
+  /* width: 184px; */
+  width: calc((100% - 104px)*0.39);
+}
+
+.diagram__value_frd {
+  /* width: 184px; */
+  width: calc((100% - 104px)*0.45);
+}
+
+.diagram__value_strd {
+  /* width: 184px; */
+  width: calc((100% - 104px)*0.73);
+}
+
+.diagram__value_snd {
+  /* width: 184px; */
+  width: calc((100% - 104px)*0.34);
 }
