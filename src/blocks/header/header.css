@@ -115,20 +115,34 @@
   .header {
   }
 
-  
+
 }
 
 
 /* monitors width between 320px and 768px */
 @media (min-width: 320px) and (max-width: 767px) {
+  .header {
+    max-width: 320px;
+    height: 56px;
+  }
+
   .header__logo {
     max-width: 117px;
+    height: 24px;
+    top: 16px;
+    left: 16px;
   }
 
   .header__links {
     max-width: 148px;
+    height: 24px;
+    margin: 16px 14px 16px auto;
   }
 
+  .header__link {
+    font-size: 16px;
+    line-height: 24px;
+  }
   .header__link_main {
     max-width: 61px;
   }
