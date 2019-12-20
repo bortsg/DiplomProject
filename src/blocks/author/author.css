@@ -17,14 +17,14 @@
 }
 
 .author {
-  width: 1440px;
+  width: 100%;
   background: #ffffff;
   display: flex;
   border: 1px solid purple;
 }
 
 .author__avatar {
-  width: 464px;
+  max-width: 464px;
   height: 464px;
   margin-top: 80px;
   margin-bottom: 80px;
@@ -50,7 +50,7 @@
 }
 
 .author__text {
-  width: 605px;
+  max-width: 605px;
   margin: 24px 0 0 0;
   font-family: 'Roboto';
   font-style: normal;
@@ -61,37 +61,68 @@
 }
 
 
-
-/* @media (min-width: 1024px) and (max-width: 1439px) {
+@media (min-width: 768px) and (max-width: 1439px) {
   .author {
-      max-width: 910px;
-      margin-top: 40px;
-      margin-bottom: 66px;
+    /* margin-top: 40px; */
+    /* margin-bottom: 66px; */
+  }
+
+  .author__avatar { 
+    max-width: 232px;
+    height: 232px;
+    margin: 40px 32px 40px 40px; 
+  }
+
+  .author__info {
+    margin-top: 42px;
+    margin-right: 40px;
+    margin-left: 0;
+  }
+
+  .author__title {
+    max-width: 424px;
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .author__text {
+    max-width: 424px;
+    font-size: 18px;
+    line-height: 24px;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .author {
-      max-width: 686px;
-      margin-top: 40px;
-      margin-bottom: 66px;
+    max-width: 320px;
+    flex-direction: column;
+  }
+
+
+  .author__avatar { 
+    max-width: 272px;
+    height: 272px;
+    margin: 32px 24px 24px 24px; 
+  }
+
+  .author__info {
+    margin-top: 16px;
+    margin-right: 16px;
+    margin-left: 16px;
+    margin-bottom: 44px;
+  }
+
+  .author__title {
+    max-width: 288px;
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .author__text {
+    max-width: 288px;
+    max-height: 360px;
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 0;
   }
 }
-
-@media (min-width: 425px) and (max-width: 767px) {
-  .author {
-      max-width: 380px;
-      flex-direction: column;
-      margin-top: 32px;
-      margin-bottom: 0;
-  }
-}
-
-@media (min-width: 320px) and (max-width: 424px) {
-  .author {
-      max-width: 290px;
-      flex-direction: column;
-      margin-top: 32px;
-      margin-bottom: 0;
-  }
-} */

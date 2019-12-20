@@ -125,7 +125,7 @@
     flex-direction: column;
     min-width: 288px;
     height: 110px;
-    margin: 32px 16px auto 12px;
+    margin: 32px 16px auto 16px;
     font-size: 30px;
     line-height: 34px;
   }
@@ -141,6 +141,6 @@
   }
 
   .results__content {
-    height: calc (1644px - (32px+108px+40px));
+    height: calc(1644px - (32px+108px+40px));
   }
 }
