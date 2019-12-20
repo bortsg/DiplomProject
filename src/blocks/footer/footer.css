@@ -12,7 +12,7 @@
 }
 
 .footer {
-  width: 1440px;
+  width: 100%;
   height: 80px;
   background: #FFFFFF;
   border: 1px solid black;
@@ -21,9 +21,7 @@
 }
 
 .footer__copyright {
-  width: 200px;
   height: 22px;
-
   font-family: 'Roboto';
   font-style: normal;
   font-weight: normal;
@@ -34,24 +32,16 @@
 }
 
 .footer__navigation {
+  border: solid 1px red;
   display: flex;
-
   flex-direction: row;
   justify-content: space-between;
-  width: 400px;
+  max-width: 400px;
   height: 22px;
   margin-top: 20px;
 }
 
 .footer__links {
-  /* width: 400px;
-  height: 22px; */
-  /* margin-top: 30px; */
-  /* margin-bottom: 28px; */
-  /* border: 1px solid green; */
-  /* display: flex;
-  justify-content: space-between; */
-
   font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: normal;
@@ -64,20 +54,6 @@
 .footer a {
   text-decoration: none;
 }
-
-.footer__navigation{
-  border: solid 1px red;
-  width: 400px;
-  height: 22px;
-  margin-top: 30px;
-  margin-bottom: 28px;
-}
-
-/* .footer ul {
-  padding-left: 0;
-  margin-top:0;
-  margin-bottom:0;
-} */
 
 .footer li {
   list-style-type: none;
@@ -94,25 +70,23 @@
   justify-content: space-between;
   position: relative;
   left: 104px;
+  margin-left: 94px;
 }
 
-.footer__icons_gh {
+.footer__icon:nth-child(1) {
   width: 24px;
   height: 24px;
   background-image: url('../../images/github-icon.png');
   background-size: contain;
-  margin-top: 30px;
-  margin-bottom: 30px;
+ 
 }
 
-
-.footer__icons_fb {
+.footer__icon:nth-child(2) {
   width: 24px;
   height: 24px;
   background-image: url('../../images/facebook-icon.png');
   background-size: contain;
-  margin-top: 28px;
-  margin-bottom: 28px;
+  
 }
 
 /* .footer__icons_gh:hover {
@@ -123,7 +97,71 @@
   fill: #3B5998;
 } */
 
+@media (min-width: 768px) and (max-width: 1439px) {
+  .footer {
+    height: 64px;
+  }
+
+  .footer__copyright {
+    height: 22px;
+    max-width: 124px;
+    margin: 24px 24px 18px 40px;
+  }
+
+  .footer__navigation {
+    width: 380px;
+    height: 22px;
+    margin-top: 21px;
+    margin-bottom: 21px;
+    padding-left: 0;
+  }
+
+  .footer__icons {
+    /* margin: 20px 0 20px 0; */
+    left: 0;
+    top: 20px;
+    width: 68px;
+    height: 20px;
+  }
+  
+  .footer__icon {
+    width: 20px;
+    height: 20px;
+  } 
+ 
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .footer {
+    height: 224px;
+    display: grid;
+    grid-template-areas: 
+    'nav icons'
+    'copyright .';
+  }
+
+  .footer__copyright {
+    grid-area: 'copyright';
+    height:22px;
+    width: 200px;
+    margin: 0;
+  }
+
+  .footer__navigation {
+    grid-area: 'nav';
+    height: 120px;
+    width: 184px;
+    margin: 0;
+  }
+
+  .footer__icons {
+    grid-area: 'icons';
+    height: 24px;
+    width: 74px;
+    margin: 0;
+  }
 
 
+}
 
 
