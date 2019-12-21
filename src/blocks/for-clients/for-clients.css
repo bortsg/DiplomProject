@@ -1,10 +1,11 @@
 .for-clients {
-  width: 100%;
+  max-width: 100%;
   background: #ffffff;
   max-width: 1240px;
-  margin: auto;
-  margin-top: 80px;
-  margin-bottom: 94px;
+  /* margin-right: auto; */
+  /* margin-top: 80px; */
+  /* margin-bottom: 94px; */
+  margin: 80px 40px 94px 40px;
 }
 
 .for-clients__text {
@@ -33,3 +34,9 @@
   color: #1A1B22;
 }
 
+@media (min-width: 320px) and (max-width: 767px) {
+  .for-clients {
+    margin: 0 auto 16px 16px;
+  }
+
+}

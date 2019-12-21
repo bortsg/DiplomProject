@@ -1,6 +1,6 @@
 .analytics {
   color: black;
-  max-width: 1440px;
+  max-width: 100%;
 }
 
 .analytics__links {
@@ -44,8 +44,8 @@
   font-size: 40px;
   line-height: 46px;
   color: #1A1B22;
-  margin-top: 80px;
-  margin-bottom: 24px;
+  margin-top: 0px;
+  /* margin-bottom: 24px; */
 }
 
 .analytics__per-week {
@@ -84,3 +84,36 @@
 }
 
 
+@media (min-width: 768px) and (max-width: 1439px) {
+  .analytics__links {
+    margin-top: 32px;
+  }
+
+  .analytics__summary {
+    /* margin-top: 64px; */
+    margin: 64px auto 0 104px;
+  }
+
+  .analytics__mentions {
+    margin-bottom: 40px;
+  }
+
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+  .analytics__links {
+    display: none;
+  }
+
+  .analytics__summary {
+    /* margin-top: 64px; */
+    width: 90%;
+    margin: 16px auto 0 auto;
+  }
+
+  .analytics__mentions {
+    margin-bottom: 40px;
+  }
+
+}

@@ -129,7 +129,7 @@
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
-  line-height: 80px;
+  /* line-height: 80px; */
 }
 
 .diagram__value {
@@ -189,4 +189,28 @@
 .diagram__value_snd {
   /* width: 184px; */
   width: calc((100% - 104px)*0.34);
+}
+
+
+
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .diagram__wrap {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 40px;
+  }
+
+  .diagram__coordinate-axis {
+    
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .diagram__wrap {
+    width: 90%;
+    padding-top: 24px;
+    margin: 0 auto;
+  }
+
 }
