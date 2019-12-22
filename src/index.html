@@ -40,7 +40,7 @@
     </section>
 
     <section class="not-found">
-      <img src="${require('./images/not-found.svg')}" class="not-found__image" alt="not-found image">
+      <img src="src/images/not-found.svg" class="not-found__image" alt="not-found image">
       <h2 class="not-found__title">Ничего не найдено</h2>
       <h3 class="not-found__subtitle">К сожалению, по вашему запросу ничего не найдено</h3>
     </section>
@@ -112,7 +112,7 @@
             может приобщиться к природе</p>
           <a href="www.lenta.ru"  class="news-item__source">Лента.ру</a>
         </article>
-        
+
       </section>
 
       <button type="submit" class="results__show-more">Показать ещё</button>
@@ -122,8 +122,9 @@
 
     <section class="author">
       <picture>
-        <source srcset="${require('./images/avatar.jpg')}">
-        <img src="${require('./images/avatar.jpg')}" alt="avatar" class="author__avatar">
+        <!-- <source srcset="${require('./images/avatar.jpg')}"> -->
+        <source srcset="src/images/avatar.jpg">
+        <img src="src/images/avatar.jpg" alt="avatar" class="author__avatar">
       </picture>
 
 
@@ -141,7 +142,7 @@
       <!-- <div class="footer__wrapper"> -->
 
 
-      
+
       <a href="" class="footer__copyright">&copy;2019 Supersite</a>
 
       <ul class="footer__navigation">

@@ -2,7 +2,6 @@
 .glide {
   width: 100px;
   height: 288px;
-  border: 1px solid blue;
 
   display: flex;
   flex-direction: column;
@@ -54,7 +53,7 @@
   display: flex;
 	justify-content: center;
   bottom: 0; */
-  
+
   width: 9px;
   height: 9px;
   padding: 0;
@@ -87,8 +86,8 @@
 	margin: 0 1px;
 	border: solid 1px transparent;
   transition: transform 0.3s ease-out; */
-  
-  width: 40px; 
+
+  width: 40px;
   position: absolute;
   z-index: 2;
   bottom: 1.5rem;
@@ -106,7 +105,7 @@
   content: '';
   position: absolute;
   bottom: 0;
-  left: 0; 
+  left: 0;
   width: 5%;
   height: 100%;
   background: linear-gradient(to right, rgb(255,255,255, 1),rgb(255,255,255, 0.5));
@@ -117,7 +116,7 @@
   content: '';
   position: absolute;
   bottom: 0;
-  right: 0; 
+  right: 0;
   width: 5%;
   height: 100%;
   background: linear-gradient(to right, rgb(255,255,255, 0.5),rgb(255,255,255, 1));
@@ -128,15 +127,15 @@
   .glide {
     height: 242px;
   }
-  
+
   .glide__track {
     /* margin-left: 80px; */
   }
-  
+
   .glide__track:before {
     display: none;
   }
-  
+
   .glide__track:after {
     display: none;
   }
@@ -155,7 +154,7 @@
   .glide__track:before {
     display: none;
   }
-  
+
   .glide__track:after {
     display: none;
   }
