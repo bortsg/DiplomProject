@@ -55,7 +55,7 @@
 @media (min-width: 320px) and (max-width: 767px) {
   .for-clients {
     margin: 20px auto 16px auto;
-    max-height: 1126px;
+    height: 1126px;
   }
 
   .for-clients__title {

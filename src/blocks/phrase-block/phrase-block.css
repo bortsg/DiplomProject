@@ -84,14 +84,51 @@
   color: #1A1B22;
 }
 
-@media (min-width: 768x) and (max-width: 1439px) {
+@media (min-width: 768px) and (max-width: 1439px) {
   .phrase-block {
     width: 336px;
     height: 242px;
     /* border: 1px solid green; */
   }
+
+  .phrase-block__ava {
+    width: 260px;
+    height: 52px;
+    margin-left: 35px;
+
+    grid-template-columns: 48px 1fr;
+    /* grid-template-rows:  48px 48px ; */
+  }
+
+  .phrase-block__photo {
+    width: 48px;
+    height: 48px;
+  }
+
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
+  .phrase-block {
+    width: 288px;
+    height: 242px;
+    /* border: 1px solid green; */
+  }
 
+  .phrase-block__ava {
+    width: 260px;
+    height: 52px;
+    margin-left: 35px;
+
+    grid-template-columns: 48px 1fr;
+    /* grid-template-rows:  48px 48px ; */
+  }
+
+  .phrase-block__photo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .phrase-block__text {
+    width: 228px;
+  }
 }
