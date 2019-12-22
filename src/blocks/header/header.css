@@ -110,6 +110,17 @@
 /* monitors width between 768px and 1400px */
 @media (min-width: 768px) and (max-width: 1439px) {
   .header {
+    height: 65px;
+  }
+
+  .header__logo {
+    top: 24px;
+    left: 40px;
+  }
+
+  .header__links {
+    margin-top: 24px;
+    margin-right: 40px;
   }
 
 
@@ -134,7 +145,7 @@
 
   .header__links {
     max-width: 148px;
-    height: 24px;
+    height: 38px;
     margin: 16px 14px 16px auto;
   }
 

@@ -54,7 +54,7 @@
 
 
 .search__field {
-  width: 698px;
+  width: 606px;
   height: 64px;
   margin: 0 auto 80px auto;
   /* border: 1px solid white; */
@@ -107,7 +107,7 @@
   }
 
   .search__title {
-    margin: 40px auto auto auto;
+    margin: 40px auto auto 162px;
     max-width: 385px;
     height: 80px;
     font-size: 36px;
@@ -117,7 +117,7 @@
   .search__subtitle {
     max-width: 385px;
     height: 72px;
-    margin: 16px auto 24px auto;
+    margin: 16px auto 24px 162px;
   }
 
   .search__field {

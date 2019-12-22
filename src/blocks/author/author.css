@@ -20,7 +20,7 @@
   width: 100%;
   background: #ffffff;
   display: flex;
-  border: 1px solid purple;
+  /* border: 1px solid purple; */
 }
 
 .author__avatar {

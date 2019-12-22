@@ -22,7 +22,7 @@
   flex-direction: column;
   max-width: 100%;
   height: 1566px;
-  border: 1px solid green;
+  /* border: 1px solid green; */
   /* clear: both; */
   background: #F5F6F7;
 }
@@ -30,10 +30,10 @@
 .results__header {
   max-width: 100%;
   height: 127px;
-  margin: 0 104px auto 104px;
+  margin: 0 104px 64px 104px;
   display: flex;
   justify-content: space-between;
-  border: 1px solid green;
+  /* border: 1px solid green; */
 }
 
 .results__title {
@@ -59,7 +59,7 @@
 }
 
 .results__content {
-  border: 1px solid pink;
+  /* border: 1px solid pink; */
   margin: 0px auto auto auto;
 }
 
@@ -142,6 +142,7 @@
   .results__title {
     margin-top: 0;
     height: 68px;
+    font-size: 30px;
   }
 
   .results__analytics {

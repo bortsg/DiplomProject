@@ -1,7 +1,7 @@
 .phrase-block {
   width: 400px;
   height: 288px;
-  border: 1px solid green;
+  /* border: 1px solid green; */
 }
 
 .phrase-block__date {
@@ -20,7 +20,7 @@
 
 
 .phrase-block__ava {
-  border: 1px solid brown;
+  /* border: 1px solid brown; */
   width: 352px;
   height: 64px;
   margin-left: 24px;
