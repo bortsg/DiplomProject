@@ -145,10 +145,10 @@
             </ul>
           </div>
 
-          <!-- <div class="glide__arrows" data-glide-el="controls">
-            <button class="glide__arrow glide__arrow--left" data-glide-dir="<"> <img src="${require('./images/arrow-left.svg')}"> </button>
-            <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><img src="${require('./images/arrow-right.svg')}"> </button>
-          </div> -->
+          <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<"> </button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">"> </button>
+          </div>
 
           <!-- <div class="glide__bullets" data-glide-el="controls[nav]">
             <button class="glide__bullet" data-glide-dir="=0"> f</button>
@@ -157,27 +157,28 @@
           </div> -->
 
         </div>
+
+        <a href="#" class="commit-story__button-gh">Открыть в Github</a>
       </section>
 
 
     </main>
 
     <footer class="footer">
-        <a href="" class="footer__copyright">&copy;2019 Supersite</a>
+      <a href="" class="footer__copyright">&copy;2019 Supersite</a>
 
-        <!-- <div class="footer__navigation"> -->
-          <ul class="footer__navigation">
-            <li> <a href="./index.html" class="footer__links footer__links_main">Главная</a> </li>
-            <li> <a href="./about.html" class="footer__links footer__links_about">О проекте</a> </li>
-            <li> <a href="https://praktikum.yandex.ru" class="footer__links footer__links_company">Яндекс.Практикум</a> </li>
-          </ul>
-        <!-- </div> -->
+      <ul class="footer__navigation">
+        <li> <a href="./index.html" class="footer__links footer__links_main">Главная</a> </li>
+        <li> <a href="./about.html" class="footer__links footer__links_about">О проекте</a> </li>
+        <li> <a href="https://praktikum.yandex.ru" class="footer__links footer__links_company">Яндекс.Практикум</a> </li>
+      </ul>
 
-        <div class="footer__icons">
-          <a href="https://github.com" class="footer__icon"> </a>
-          <a href="https://facebook.com" class="footer__icon"> </a>
-        </div>
-      </footer>
+      <div class="footer__icons">
+        <a href="https://github.com" class="footer__icon"> </a>
+        <a href="https://facebook.com" class="footer__icon"> </a>
+      </div>
+    </footer>
+
   </div>
 
   <script src="<%= htmlWebpackPlugin.files.chunks.about.entry %>"></script>
@@ -193,14 +194,26 @@
     // new Glide('.glide',config).mount()
 
     new Glide('.glide', {
-      type: 'slider',
-      // Anchors: ,
-      // focusAt: 0,
-      startAt: 0,
+      // type: 'slider',
+      // startAt: 0,
+      // perView: 3.5,
+      type: 'carousel',
       perView: 3.5,
-      // peek: 88
-      // slidestoshow: 3.
+      focusAt: 'center',
+      breakpoints: {
+        1439: {
+          perView: 2.2,
+          focusAt: 1,
+        },
+        767: {
+          perView: 1,
+          focusAt: 'center'
+        }
+      }
     }).mount()
+
+
+
   </script>
 </body>
 </html>

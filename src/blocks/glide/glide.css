@@ -14,7 +14,6 @@
 
 .glide__track {
   width: 100%;
-  /* border: 1px solid blue; */
   align-items: center;
   justify-content: center;
 }
@@ -31,12 +30,22 @@
 
 
 .glide__arrow {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  border: transparent;
-  /* display: none; */
+  background: transparent;
   color: transparent;
+  border: 0px;
+}
+
+.glide__arrow--left {
+  background-image: url(../../images/arrow-left.svg);
+  background-size: contain;
+}
+
+.glide__arrow--right {
+  background-image: url(../../images/arrow-right.svg);
+  background-size: contain;
 }
 
 .glide__bullets {
@@ -60,3 +69,59 @@
 	border: solid 1px transparent;
 	transition: transform 0.3s ease-out;
 } */
+
+.glide__track:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0; 
+  width: 5%;
+  height: 100%;
+  background: linear-gradient(to right, rgb(255,255,255, 1),rgb(255,255,255, 0.5));
+  z-index: 1;
+}
+
+.glide__track:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0; 
+  width: 5%;
+  height: 100%;
+  background: linear-gradient(to right, rgb(255,255,255, 0.5),rgb(255,255,255, 1));
+  z-index: 1;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .glide__track {
+    /* margin-left: 80px; */
+  }
+  
+  .glide__track:before {
+    display: none;
+  }
+  
+  .glide__track:after {
+    display: none;
+  }
+
+  .glide__arrows {
+    display: none;
+  }
+
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .glide__track:before {
+    display: none;
+  }
+  
+  .glide__track:after {
+    display: none;
+  }
+
+  .glide__arrows {
+    display: none;
+  }
+
+}

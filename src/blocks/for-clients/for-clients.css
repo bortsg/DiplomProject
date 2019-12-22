@@ -14,14 +14,14 @@
   line-height: 46px;
   letter-spacing: 5px;
   color: #1A1B22;
-  margin: 0 0 0 40px;
+  margin: 0 0 0 100px;
 }
 
 .for-clients__text {
-  max-width: 100%;
+  max-width: 815px;
   margin: 0;
   margin-top: 23px;
-  margin-left: 36px;
+  margin-left: 100px;
 
   font-family: 'Roboto';
   font-style: normal;
@@ -55,7 +55,7 @@
 @media (min-width: 320px) and (max-width: 767px) {
   .for-clients {
     margin: 20px auto 16px auto;
-    height: 1126px;
+    max-height: 1126px;
   }
 
   .for-clients__title {

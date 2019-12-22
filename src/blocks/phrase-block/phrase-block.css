@@ -84,3 +84,14 @@
   color: #1A1B22;
 }
 
+@media (min-width: 768x) and (max-width: 1439px) {
+  .phrase-block {
+    width: 336px;
+    height: 242px;
+    /* border: 1px solid green; */
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+}

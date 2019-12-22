@@ -158,7 +158,7 @@
   .footer__copyright {
     grid-area: copyright;
     height:22px;
-    width: 200px;
+    max-width: 200px;
     margin: 0;
     margin-left: 16px;
   }
@@ -166,7 +166,7 @@
   .footer__navigation {
     grid-area: nav;
     height: 120px;
-    width: 184px;
+    max-width: 184px;
     margin: 0;
     padding:0;
     flex-direction: column;
@@ -177,7 +177,7 @@
   .footer__icons {
     grid-area: icons;
     height: 24px;
-    width: 74px;
+    max-width: 74px;
     margin: 20px 14px auto auto;
     /* right:20px; */
     /* left:0; */

@@ -1,0 +1,183 @@
+.commits{
+  min-height: 610px;
+  background: #F5F6F7;
+}
+
+
+.commits__button{
+  border: 1px solid #1A1B22;
+  box-sizing: border-box;
+  border-radius: 80px;
+  
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  
+  
+  color: #1A1B22;
+  background-color: #F5F6F7;
+  
+  margin: 48px 16px 0;
+  width: 285px;
+  height: 56px;
+  
+  display: none;
+  }
+  
+  
+.commits__carousel-cell{
+    padding: 24px;
+    background: white;
+    width: 30%;
+    margin: 0 8px;
+    max-width: 352px;
+    border-radius: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    overflow: hidden;
+    height: 245px;
+}
+
+
+
+.commits__carousel{
+  background: #F5F6F7;
+  margin: 0 auto;
+}
+
+.commits__carousel::before, .commits__carousel::after {
+  content: '';
+  width: 88px;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  z-index: 1;
+}
+
+.commits__carousel:before{
+  left: 0;
+  background: linear-gradient(90deg,#f5f6f7 0,hsla(0,0%,100%,0));
+}
+
+.commits__carousel:after{
+  right: 0;
+  background: linear-gradient(270deg,#f5f6f7 0,hsla(0,0%,100%,0));
+}
+
+.commits__header{
+  width: 86%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: 72px;
+  padding-bottom: 64px;
+}
+
+.commits__link{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  
+  text-decoration: none;
+  
+  color: #1A1B22;
+  }
+
+  
+.commits__title{
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 46px;
+    
+    color: #1A1B22;
+    
+    margin: 0;
+ }
+    
+    
+
+/*     
+    @media (max-width: 768px) {
+        .commits__title{
+            font-size: 30px;
+            line-height: 34px;
+            width: 336px;
+            }
+    }
+    
+    @media (max-width: 320px) {
+        .commits__title{
+            width: 200px;
+            }
+    }
+  
+  @media (max-width: 320px) {
+      .commits__link{
+      display: none;
+          }
+  }
+
+
+
+@media (max-width: 768px) {
+  .commits__header {
+      width: 90%;
+      padding-top: 40px;
+      padding-bottom: 32px;
+  }
+}
+
+@media (max-width: 320px) {
+  .commits__header {
+      padding-top: 32px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+    .commits__carousel-cell{
+        max-height: 194px;
+        margin: 0 8px 0 0;
+        padding: 24px 16px 24px 24px;
+        width: 40%;
+        max-width: 296px;
+    }
+}
+
+@media (max-width: 320px) {
+    .commits__carousel-cell{
+        max-height: 215px;
+        width: calc(100% - 80px);
+    }
+}
+
+  @media (max-width: 320px) {
+      .commits__button{        
+          display: block;
+          }
+      
+  }
+
+
+
+
+@media (max-width: 768px) {
+  .commits{
+      min-height: 462px;
+      margin-top: 37px;
+  }
+}
+
+@media (max-width: 320px) {
+  .commits{
+      min-height: 568px;
+  }
+} */
