@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About</title>
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.about.css %>">
-  <link rel="icon" href="<%=require('./images/favicon.png')%>" type="image/png">
+  <link rel="icon" href="src/images/favicon.png" type="image/png">
   <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
   <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
 </head>
@@ -61,8 +61,8 @@
 
       <section class="author">
         <picture>
-          <source srcset="${require('./images/avatar.jpg')}">
-          <img src="${require('./images/avatar.jpg')}" alt="" class="author__avatar">
+          <source srcset="src/images/avatar.jpg">
+          <img src="src/images/avatar.jpg" alt="" class="author__avatar">
         </picture>
 
         <div class="author__info">
