@@ -62,7 +62,7 @@
       <section class="author">
         <picture>
           <source srcset="src/images/avatar.jpg">
-          <img src="src/images/avatar.jpg" alt="" class="author__avatar">
+          <img src="src/images/avatar.jpg" alt="avatar" class="author__avatar">
         </picture>
 
         <div class="author__info">
@@ -89,8 +89,8 @@
 
               <li class="glide__slide phrase-block">
                 <h4 class="phrase-block__date">14 августа, 2019</h4>
-                <div class="phrase-block__ava">
-                  <img src="src/images/image-01.png" class="phrase-block__photo" alt="">
+                <div class="phrase-block__person">
+                  <img src="src/images/image-01.png" class="phrase-block__photo" alt="quote avatar">
                   <p class="phrase-block__name">Антон Долинин</p>
                   <p class="phrase-block__mail">anton@yandex.ru</p>
                 </div>
@@ -100,30 +100,30 @@
 
               <li class="glide__slide phrase-block">
                 <h4 class="phrase-block__date">15 августа, 2019</h4>
-                <div class="phrase-block__ava">
-                  <img src="src/images/image-02.png" class="phrase-block__photo" alt="">
+                <div class="phrase-block__person">
+                  <img src="src/images/image-02.png" class="phrase-block__photo" alt="quote avatar">
                   <p class="phrase-block__name">Антон Долинин</p>
                   <p class="phrase-block__mail">anton@yandex.ru</p>
                 </div>
-                <p class="phrase-block__text">Emmet (formerly Zen Coding) is a web-
-                    developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
+                <p class="phrase-block__text">You can install this plugin directly from NetBeans Plugin Portal:
+                    in NetBeans, open <span class="phrase-block__span">Tools > Plugins > Available plugins</span> and find and install Emmet plugin.</p>
               </li>
 
               <li class="glide__slide phrase-block">
                 <h4 class="phrase-block__date">16 августа, 2019</h4>
-                <div class="phrase-block__ava">
-                  <img src="src/images/image-03.png" class="phrase-block__photo" alt="">
+                <div class="phrase-block__person">
+                  <img src="src/images/image-03.png" class="phrase-block__photo" alt="quote avatar">
                   <p class="phrase-block__name">Антон Долинин</p>
                   <p class="phrase-block__mail">anton@yandex.ru</p>
                 </div>
-                <p class="phrase-block__text">Emmet (formerly Zen Coding) is a web-
-                    developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
+                <p class="phrase-block__text">With Emmet, you can type CSS-like expressions that can be dynamically
+                      parsed, and produce output depending on what you type in the abb...</p>
               </li>
 
               <li class="glide__slide phrase-block">
                 <h4 class="phrase-block__date">17 августа, 2019</h4>
-                <div class="phrase-block__ava">
-                  <img src="src/images/image-01.png" class="phrase-block__photo" alt="">
+                <div class="phrase-block__person">
+                  <img src="src/images/image-01.png" class="phrase-block__photo" alt="quote avatar">
                   <p class="phrase-block__name">Антон Долинин</p>
                   <p class="phrase-block__mail">anton@yandex.ru</p>
                 </div>
@@ -133,8 +133,8 @@
 
               <li class="glide__slide phrase-block">
                 <h4 class="phrase-block__date">18 августа, 2019</h4>
-                <div class="phrase-block__ava">
-                  <img src="src/images/image-02.png" class="phrase-block__photo" alt="">
+                <div class="phrase-block__person">
+                  <img src="src/images/image-02.png" class="phrase-block__photo" alt="quote avatar">
                   <p class="phrase-block__name">Антон Долинин</p>
                   <p class="phrase-block__mail">anton@yandex.ru</p>
                 </div>
@@ -207,7 +207,12 @@
         },
         767: {
           perView: 1,
-          focusAt: 'center'        }
+          focusAt: 'center'
+        },
+        // 320: {
+        //   focutAt: 1,
+        //   perView: 1
+        // }
       }
     }).mount()
 

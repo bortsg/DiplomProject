@@ -57,10 +57,7 @@ module.exports = {
       }
     ]
   },
-  plugins: [
-    new MiniCssExtractPlugin({
-      filename: 'style.[contenthash].css',
-    }),
+  plugins: [   
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css$/g,
       cssProcessor: require('cssnano'),
@@ -73,21 +70,26 @@ module.exports = {
       inject: false,
       hash: true,
       template: './src/index.html',
-      filename: 'index.html'
+      filename: 'index.html',
+      // chunks: ['index']
     }),
     new HtmlWebpackPlugin({
       inject: false,
       hash: true,
       template: './src/about.html',
-      filename: 'about.html'
+      filename: 'about.html',
+      // chunks: ['about']
     }),
     new HtmlWebpackPlugin({
       inject: false,
       hash: true,
       template: './src/analytics.html',
-      filename: 'analytics.html'
+      filename: 'analytics.html',
+      // chunks: ['analytics']
     }),
-
+    new MiniCssExtractPlugin({
+      filename: 'style/[name].[contenthash].css',
+    }),
     new WebpackMd5Hash(),
     new webpack.DefinePlugin({
       'NODE_ENV': JSON.stringify(process.env.NODE_ENV)

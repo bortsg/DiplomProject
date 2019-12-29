@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: 'Robotoslab';
   font-size: normal;
   src: url('../../fonts/robotoslab-regular-webfont.woff') format('woff');
@@ -26,7 +26,7 @@
   font-family: 'Source-Sans-pro';
   font-size: normal;
   src: url('../../fonts/source-sans-pro-regular.woff') format('woff');
-}
+} */
 
 
 .header {

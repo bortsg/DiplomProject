@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: 'Robotoslab';
   font-size: normal;
   src: url('../../fonts/robotoslab-regular-webfont.woff') format('woff');
@@ -14,7 +14,7 @@
   font-family: 'Roboto';
   font-size: medium;
   src: url('../../fonts/roboto-medium-webfont.woff') format('woff');
-}
+} */
 
 .results {
   /* position: relative; */
@@ -129,7 +129,7 @@
   .results {
     height: 1668px;
   }
-  
+
   .results__header {
     flex-direction: column;
     min-width: 288px;

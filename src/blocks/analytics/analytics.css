@@ -1,3 +1,34 @@
+@font-face {
+  font-family: 'Robotoslab';
+  font-size: normal;
+  src: url('../../fonts/robotoslab-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-size: normal;
+  src: url('../../fonts/roboto-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-size: medium;
+  src: url('../../fonts/roboto-medium-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Robotoslab';
+  font-size: bold;
+  src: url('../../fonts/RobotoSlab-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Source-Sans-pro';
+  font-size: normal;
+  src: url('../../fonts/source-sans-pro-regular.woff') format('woff');
+}
+
+
 .analytics {
   color: black;
   max-width: 100%;
@@ -23,10 +54,10 @@
   text-decoration: none;
 }
 
-.analytics__link_state_active {
-  /* border-bottom: 3px solid; */
-  /* text-decoration: none; */
-}
+/* .analytics__link_state_active {
+  border-bottom: 3px solid;
+  text-decoration: none;
+} */
 
 .analytics__link_state_inactive {
   color: #B6BCBF;
@@ -38,7 +69,7 @@
 }
 
 .analytics__title {
-  font-family: Roboto Slab;
+  font-family: Robotoslab, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 40px;
@@ -50,7 +81,7 @@
 }
 
 .analytics__per-week {
-  font-family: Roboto;
+  font-family: Roboto, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -61,7 +92,7 @@
 }
 
 .analytics__per-week_volume {
-  font-family: Roboto;
+  font-family: Roboto, Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -70,7 +101,7 @@
 }
 
 .analytics__mentions {
-  font-family: Roboto;
+  font-family: Roboto, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -101,7 +132,8 @@
     margin: 64px auto 0 40px;
   }
 
-  .analytics__mentions {
+
+ .analytics__mentions {
     margin-bottom: 40px;
   }
 

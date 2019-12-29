@@ -1,3 +1,14 @@
+@font-face {
+  font-family: 'Robotoslab';
+  font-size: normal;
+  src: url('../../fonts/robotoslab-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-size: normal;
+  src: url('../../fonts/roboto-regular-webfont.woff') format('woff');
+}
 
 @font-face {
   font-family: 'Roboto';
@@ -6,10 +17,17 @@
 }
 
 @font-face {
-  font-family: 'Source Sans Pro';
-  font-size: medium;
+  font-family: 'Robotoslab';
+  font-size: bold;
+  src: url('../../fonts/RobotoSlab-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Source-Sans-pro';
+  font-size: normal;
   src: url('../../fonts/source-sans-pro-regular.woff') format('woff');
 }
+
 
 .footer {
   width: 100%;
@@ -96,7 +114,7 @@
   height: 24px;
   background-image: url('../../images/github-icon.png');
   background-size: contain;
- 
+
 }
 
 .footer__icon:nth-child(2) {
@@ -104,7 +122,7 @@
   height: 24px;
   background-image: url('../../images/facebook-icon.png');
   background-size: contain;
-  
+
 }
 
 /* .footer__icons_gh:hover {
@@ -130,7 +148,7 @@
     width: 380px;
     height: 22px;
     margin: 21px auto;
-    padding-left: 0;    
+    padding-left: 0;
   }
 
   .footer__icons {
@@ -139,7 +157,7 @@
     height: 20px;
     margin-right: 40px;
   }
-  
+
   .footer__icon {
     width: 20px;
     height: 20px;
@@ -150,7 +168,7 @@
   .footer {
     height: 224px;
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
     "nav icons"
     "copyright icons";
   }

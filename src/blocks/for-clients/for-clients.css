@@ -1,3 +1,5 @@
+
+
 .for-clients {
   width: 100%;
   background: #ffffff;
@@ -43,13 +45,13 @@
     font-size: 30px;
     line-height: 34px;
   }
-  
+
   .for-clients__text {
     margin-left: 30px;
     margin-right: 40px;
   }
 
-  
+
 }
 
 @media (min-width: 320px) and (max-width: 767px) {

@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: 'Robotoslab';
   font-size: normal;
   src: url('../../fonts/robotoslab-regular-webfont.woff') format('woff');
@@ -14,7 +14,7 @@
   font-family: 'Roboto';
   font-size: medium;
   src: url('../../fonts/roboto-medium-webfont.woff') format('woff');
-}
+} */
 
 .news {
   position: relative;
@@ -104,7 +104,7 @@
     grid-gap: 8px;
     overflow: hidden;
   }
-  
+
   .news-item {
     /* max-width: 224px; */
     /* max-width: 33%; */

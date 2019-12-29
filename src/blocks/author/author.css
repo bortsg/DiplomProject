@@ -16,6 +16,18 @@
   src: url('../../fonts/roboto-medium-webfont.woff') format('woff');
 }
 
+@font-face {
+  font-family: 'Robotoslab';
+  font-size: bold;
+  src: url('../../fonts/RobotoSlab-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Source-Sans-pro';
+  font-size: normal;
+  src: url('../../fonts/source-sans-pro-regular.woff') format('woff');
+}
+
 .author {
   width: 100%;
   background: #ffffff;
@@ -41,7 +53,7 @@
 
 .author__title {
   margin: 0;
-  font-family: 'Roboto Slab';
+  font-family: Roboto Slab, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 40px;
@@ -52,7 +64,7 @@
 .author__text {
   max-width: 605px;
   margin: 24px 0 0 0;
-  font-family: 'Roboto';
+  font-family: Roboto, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -68,10 +80,10 @@
     height: 372px;
   }
 
-  .author__avatar { 
+  .author__avatar {
     max-width: 232px;
     height: 232px;
-    margin: 40px 32px 40px 40px; 
+    margin: 40px 32px 40px 40px;
   }
 
   .author__info {
@@ -79,7 +91,7 @@
     margin-top: 42px;
     margin-right: auto;
     margin-left: 0;
-    
+
   }
 
   .author__title {
@@ -106,10 +118,10 @@
   }
 
 
-  .author__avatar { 
+  .author__avatar {
     max-width: 272px;
     height: 272px;
-    margin: 32px 24px 24px 24px; 
+    margin: 32px 24px 24px 24px;
   }
 
   .author__info {
