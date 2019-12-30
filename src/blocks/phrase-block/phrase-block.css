@@ -19,7 +19,7 @@
 }
 
 
-.phrase-block__ava {
+.phrase-block__person {
   /* border: 1px solid brown; */
   width: 352px;
   height: 64px;
@@ -84,6 +84,10 @@
   color: #1A1B22;
 }
 
+.phrase-block__span {
+  background-color: #F5F6F7;
+}
+
 @media (min-width: 768px) and (max-width: 1439px) {
   .phrase-block {
     width: 336px;
@@ -91,7 +95,7 @@
     /* border: 1px solid green; */
   }
 
-  .phrase-block__ava {
+  .phrase-block__person {
     width: 260px;
     height: 52px;
     margin-left: 35px;
@@ -114,7 +118,7 @@
     /* border: 1px solid green; */
   }
 
-  .phrase-block__ava {
+  .phrase-block__person {
     width: 260px;
     height: 52px;
     margin-left: 35px;
