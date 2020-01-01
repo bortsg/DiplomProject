@@ -96,17 +96,32 @@
   }
 
   .phrase-block__person {
-    width: 260px;
+    /* width: 260px; */
+    max-width: 85%;
     height: 52px;
-    margin-left: 35px;
+    margin-left: 24px;
 
     grid-template-columns: 48px 1fr;
-    /* grid-template-rows:  48px 48px ; */
+    grid-template-rows:  24px 24px ;
   }
 
   .phrase-block__photo {
     width: 48px;
     height: 48px;
+  }
+
+  .phrase-block__name {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 20px;
+    line-height: 30px;
+    height: 24px;
+  }
+
+  .phrase-block__mail {
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 3px;
   }
 
 }

@@ -1,3 +1,29 @@
+/* @font-face {
+  font-family: 'Robotoslab';
+  font-size: normal;
+  src: url('../../fonts/robotoslab-regular-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-size: normal;
+  src: url('../../fonts/roboto-regular-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-size: medium;
+  src: url('../../fonts/roboto-medium-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: 'Robotoslab';
+  font-size: bold;
+  src: url('../../fonts/RobotoSlab-Bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Source-Sans-pro';
+  font-size: normal;
+  src: url('../../fonts/source-sans-pro-regular.woff') format('woff');
+} */
+
 .commit-story {
   width: 100%;
   height: 606px;
@@ -18,7 +44,7 @@
   max-width: 712px;
   height: 46px;
   margin: 0 auto 64px 104px;
-  font-family: Roboto Slab;
+  font-family: Roboto Slab, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 40px;
@@ -32,7 +58,7 @@
   margin: 16px 104px 68px auto;
   text-decoration: none;
   color: #1A1B22;
-  font-family: Roboto;
+  font-family: Roboto, Arial, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -47,11 +73,11 @@
   .commit-story {
     height: 464px;
   }
-  
+
   .commit-story__header {
     padding-top: 40px;
   }
-  
+
   .commit-story__title {
     width: 347px;
     margin-left: 40px;
@@ -75,14 +101,14 @@
   .commit-story {
     height: 574px;
   }
-  
+
   .commit-story__header {
     /* height: 166px; */
     padding-top: 32px;
     flex-direction: column;
 
   }
-  
+
   .commit-story__title {
     margin: 0 auto 0 16px;
     /* margin-left: 16px; */
@@ -101,7 +127,7 @@
     justify-content: center;
     width: 288px;
     height: 56px;
-    font-family: Roboto;
+    font-family: Roboto, Arial, sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
