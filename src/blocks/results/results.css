@@ -125,9 +125,9 @@
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
-  .results {
+  /* .results { */
     /* height: 1668px; */
-  }
+  /* } */
 
   .results__header {
     flex-direction: column;
