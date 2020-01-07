@@ -113,9 +113,9 @@
 
   .results__content {
     /* max-width: 688px; */
-    max-width: 90%;
+    /* max-width: 90%; */
     margin: 32px auto auto auto;
-    height: 420px;
+    /* height: 420px; */
     overflow: hidden;
   }
 
@@ -129,7 +129,7 @@
   .results {
     height: 1668px;
   }
-  
+
   .results__header {
     flex-direction: column;
     min-width: 288px;
@@ -151,7 +151,7 @@
   }
 
   .results__content {
-    height: calc(1644px - (32px+108px+40px));
+    /* height: calc(1644px - (32px+108px+40px)); */
     margin: 32px auto 8px auto;
   }
 
