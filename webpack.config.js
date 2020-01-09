@@ -42,10 +42,6 @@ module.exports = {
           loader: "babel-loader"
         }
       },
-      // {
-      //   test: /\.css$/,
-      //   use:  [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader']
-      // },
       {
         test: /\.css$/i,
         use: [
@@ -58,7 +54,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'css/[name].[contenthash].css',
+      filename: '[name].[contenthash].css'
     }),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css$/g,
@@ -70,21 +66,21 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       inject: false,
-      hash: true,
       template: './src/index.html',
-      filename: 'index.html'
+      filename: 'index.html',
+      // chunks: ['index']
     }),
     new HtmlWebpackPlugin({
       inject: false,
-      hash: true,
       template: './src/about.html',
-      filename: 'about.html'
+      filename: 'about.html',
+      // chunks: ['about']
     }),
     new HtmlWebpackPlugin({
       inject: false,
-      hash: true,
       template: './src/analytics.html',
-      filename: 'analytics.html'
+      filename: 'analytics.html',
+      // chunks: ['analytics']
     }),
 
     new WebpackMd5Hash(),
