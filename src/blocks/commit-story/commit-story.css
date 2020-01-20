@@ -110,12 +110,13 @@
   }
 
   .commit-story__title {
-    margin: 0 auto 0 16px;
+    margin: 0 auto 16px 16px;
     /* margin-left: 16px; */
     width:170px;
     height: 120px;
     font-size: 30px;
     line-height: 40px;
+    letter-spacing: 3px;
   }
 
   .commit-story__gh {

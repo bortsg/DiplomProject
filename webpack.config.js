@@ -9,8 +9,8 @@ const isDev = process.env.NODE_ENV === 'development';
 module.exports = {
   entry: {
     main: './src/index.js',
-    about: './src/about/index.js',
-    analytics: './src/analytics/index.js'
+    about: './src/about/about.js',
+    analytics: './src/analytics/analytics.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -45,12 +45,7 @@ module.exports = {
       {
         test: /\.css$/i,
         use: [
-            (isDev ? 'style-loader' : {
-              loader: MiniCssExtractPlugin.loader,
-              options: {
-                  publicPath: '../',
-              }
-          } ),
+            (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
             'css-loader',
             'postcss-loader'
         ]
@@ -73,19 +68,16 @@ module.exports = {
       inject: false,
       template: './src/index.html',
       filename: 'index.html',
-      // chunks: ['index']
     }),
     new HtmlWebpackPlugin({
       inject: false,
       template: './src/about.html',
       filename: 'about.html',
-      // chunks: ['about']
     }),
     new HtmlWebpackPlugin({
       inject: false,
       template: './src/analytics.html',
       filename: 'analytics.html',
-      // chunks: ['analytics']
     }),
 
     new WebpackMd5Hash(),

@@ -129,9 +129,26 @@
 @media (min-width: 320px) and (max-width: 767px) {
   .phrase-block {
     width: 288px;
-    height: 242px;
+    height: 262px;
     /* border: 1px solid green; */
+    border-radius: 10px;
   }
+
+  .phrase-block__date {
+    width: 192px;
+    height: 22px;
+    margin-top: 16px;
+    margin-left: 24px;
+    margin-bottom: 8px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    color: #B6BCBF;
+  }
+
+
 
   .phrase-block__person {
     width: 260px;
@@ -148,6 +165,17 @@
   }
 
   .phrase-block__text {
-    width: 228px;
+    width: 230px;
   }
+
+  .phrase-block__name {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 22px;
+    line-height: 30px;
+    height: 24px;
+    letter-spacing: 1px;
+  }
+
+
 }

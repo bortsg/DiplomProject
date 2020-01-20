@@ -43,19 +43,19 @@
     font-size: 30px;
     line-height: 34px;
   }
-  
+
   .for-clients__text {
     margin-left: 30px;
     margin-right: 40px;
   }
 
-  
+
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
   .for-clients {
-    margin: 20px auto 16px auto;
-    height: 1126px;
+    margin: 20px auto 36px auto;
+    max-height: 1126px;
   }
 
   .for-clients__title {

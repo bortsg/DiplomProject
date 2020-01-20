@@ -17,12 +17,13 @@
 
 .glide__slides {
   width: 400px;
-  height: 288px;
+  /* height: 288px; */
   margin-top: 0;
 }
 
 .glide__slide {
   background: #FFFFFF;
+  height: 262px;
 }
 
 .glide__arrow {
@@ -64,7 +65,6 @@
   box-shadow: 0 0.25em 0.5em 0 rgba(0,0,0,.1);
   margin: 0 .25em;
 
-  background-color: red;
 }
 
 .glide__bullet--active {
@@ -87,7 +87,7 @@
   width: 40px;
   position: absolute;
   z-index: 2;
-  bottom: 1.5rem;
+  bottom: 0;
   left: 50%;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -168,4 +168,8 @@
     max-width: 288px;
   }
 
+  .glide__slide {
+    height: 262px;
+    max-width: 352px;
+  }
 }

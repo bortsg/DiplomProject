@@ -1,7 +1,6 @@
 import "./pages/index.css";
 // import "./src/scripts/main.js";
 
-console.log('main.js');
 
 const now = new Date();
 const dayPrevious= 7;

@@ -68,10 +68,10 @@
     height: 372px;
   }
 
-  .author__avatar { 
+  .author__avatar {
     max-width: 232px;
     height: 232px;
-    margin: 40px 32px 40px 40px; 
+    margin: 40px 32px 40px 40px;
   }
 
   .author__info {
@@ -79,7 +79,7 @@
     margin-top: 42px;
     margin-right: auto;
     margin-left: 0;
-    
+
   }
 
   .author__title {
@@ -106,23 +106,24 @@
   }
 
 
-  .author__avatar { 
+  .author__avatar {
     max-width: 272px;
     height: 272px;
-    margin: 32px 24px 24px 24px; 
+    margin: 32px 24px 24px 24px;
   }
 
   .author__info {
-    margin-top: 16px;
+    margin-top: 0px;
     margin-right: 16px;
     margin-left: 16px;
-    margin-bottom: 44px;
+    margin-bottom: 32px;
   }
 
   .author__title {
     max-width: 288px;
     font-size: 30px;
     line-height: 40px;
+    margin-bottom: 12px;
   }
 
   .author__text {
@@ -130,6 +131,6 @@
     max-height: 360px;
     font-size: 18px;
     line-height: 24px;
-    margin-top: 0;
+    margin-top: 0px;
   }
 }
