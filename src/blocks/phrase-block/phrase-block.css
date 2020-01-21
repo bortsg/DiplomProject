@@ -129,7 +129,7 @@
 @media (min-width: 320px) and (max-width: 767px) {
   .phrase-block {
     width: 288px;
-    height: 262px;
+    height: 264px;
     /* border: 1px solid green; */
     border-radius: 10px;
   }
