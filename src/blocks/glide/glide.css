@@ -66,6 +66,14 @@
   background-color: black !important;
 }
 
+.glide__bullet:hover {
+  border: 2px solid black !important;
+}
+
+.glide__bullet:focus {
+  border: 2px solid black !important;
+}
+
 .glide__bullets {
 	/* background-color: #dbdbdb;
 	border-radius: 50%;
@@ -82,7 +90,7 @@
   width: 40px;
   position: absolute;
   z-index: 2;
-  bottom: 0;
+  bottom: -48px !important;
   left: 50%;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -121,12 +129,14 @@
     height: 242px;
   }
 
+  .glide__bullets {
+    bottom: -32px !important;
+  }
 
   .glide__slides {
     width: 336px;
     height: 242px;
   }
-
 
   /* .glide__track {
     margin-left: 80px;
@@ -156,7 +166,9 @@
     height: 264px;
   }
 
-
+  .glide__bullets {
+    bottom: -16px !important;
+  }
 
   .glide__track:before {
     display: none;
