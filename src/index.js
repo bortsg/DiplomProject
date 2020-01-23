@@ -1,5 +1,4 @@
 import "./pages/index.css";
-// import "./src/scripts/main.js";
 
 
 const now = new Date();
