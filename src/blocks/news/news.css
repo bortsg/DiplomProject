@@ -59,7 +59,7 @@
   margin: 12px 24px 16px 24px;
 }
 
-.news-item__text {
+.news-item__description {
   /* margin-left: 24px; */
   font-family: 'Roboto';
   font-size: 16px;
@@ -132,7 +132,7 @@
     margin-left: 16px;
   }
 
-  .news-item__text {
+  .news-item__description {
     width: 192px;
     height: 88px;
     font-size: 16px;
@@ -194,7 +194,7 @@
     margin: 16px auto 0 16px;
   }
 
-  .news-item__text {
+  .news-item__description {
     width: 256px;
     height: 88px;
     font-size: 16px;

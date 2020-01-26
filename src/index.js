@@ -13,6 +13,11 @@ const pageSize = 100;
 function validateForm() {
   // После сабмита формы производится валидация. Если в поле не введён текст, выводится ошибка
   // «Нужно ввести ключевое слово»
+
+
+  //ЧТО ПРОИСХОДИТ ЕСЛИ ВВОДИТЬ ЦИФРЫ В ПОЛЕ ПОИСКА?!
+
+
 }
 
 function showResultsBlock() {
@@ -32,11 +37,71 @@ function showNotFoundResults() {
   document.querySelector('.not-found').setAttribute('style', 'display:flex');
 }
 
+function createCard(data) {
+  console.log(data.articles[1]);
+
+  // constructor () {
+  // this.title=
+  // this.date=
+  // this.subtitle=
+  // this.image=
+  // }
+
+  console.log(data.articles[1].title);
+
+  console.log(data.articles[1].source.name);
+
+  console.log(data.articles[1].publishedAt);
+
+  console.log(data.articles[1].description);
+
+  console.log(data.articles[1].urlToImage);
+
+  console.log(data.articles[1].url);
+
+  const date = data.articles[1].publishedAt;
+  const parsedDate = Date.parse(date);
+  
+  const formatter = new Intl.DateTimeFormat("ru", {
+    year: "numeric",
+    month: "long",
+    day: "numeric"
+  });
+
+  // console.log( formatter.format(new Date(parsedDate)) );
+  const formattedDate = formatter.format(new Date(parsedDate));
+
+  console.log(formattedDate.slice(0, formattedDate.length-8) + ", " + formattedDate.slice(-7,-3));
+  //отрезаем от года символ "г.", добавляем между ними запятую, и приписываем год (только цифры)
+
+  const card = document.createElement('article');
+  card.classList.add('news-item');
+[]
+  const newsImage = document.createElement('img');
+  newsImage.classList.add('news-item__image');
+
+  const newsDate = document.createElement('div');
+  newsDate.classList.add('news-item__date');
+
+  const newsTitle = document.createElement('h3');
+  newsTitle.classList.add('news-item__title');
+
+  const newsDescription = document.createElement('p');
+  newsDescription.classList.add('news-item__description');
+
+  const newsUrl = document.createElement('a');
+  newsUrl.classList.add('news-item__source');
+}
+
 function showCards() {
   // Когда данные получены, в блоке результатов исчезает прелоудер, и появляются карточки.
-  // Их следует расположить в линию по 3 на каждой строке на разрешении 1280 пикселей.
-  // Если сжимать окно браузера, карточки переносятся на следующую строку.
   document.querySelector('.preloader').setAttribute('style', 'display:none');
+
+  // Их следует расположить в линию по 3 на каждой строке на разрешении 1280 пикселей.
+
+
+  // Если сжимать окно браузера, карточки переносятся на следующую строку.
+
 
 
   // Если карточек больше трёх, отрисовываются только 3, а под ними появляется кнопка «Показать ещё».
@@ -63,14 +128,15 @@ document.querySelector('.search__field').addEventListener('submit', () => {
 
         showResultsBlock();
 
-        console.log('ok');
+        // console.log('ok');
         return res.json();
       }
       return Promise.reject(`Код ошибки: ${res.status}`);
     })
     .then((data) => {
       console.log(data);
-      console.log(data.totalResults);
+      // console.log(data.totalResults);
+      // console.log(data.articles[1]);
       // настроить хранение localStorage
 
       if (data.totalResults===0) {
@@ -78,7 +144,7 @@ document.querySelector('.search__field').addEventListener('submit', () => {
         showNotFoundResults();
       }
 
-
+      createCard(data);
       // showCards();
     })
     .catch((err) => {
