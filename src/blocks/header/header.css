@@ -105,7 +105,9 @@
   color: #B6BCBF;
 }
 
-
+.header__link:hover {
+  opacity: 0.5;
+}
 
 /* monitors width between 768px and 1400px */
 @media (min-width: 768px) and (max-width: 1439px) {

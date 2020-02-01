@@ -83,6 +83,10 @@
   margin: 18px 24px 24px 24px;
 }
 
+.news-item__source:hover {
+  opacity: 0.5;
+}
+
 .news-item__image {
   max-width: 400px;
   height: 272px;
@@ -104,7 +108,7 @@
     grid-gap: 8px;
     overflow: hidden;
   }
-  
+
   .news-item {
     /* max-width: 224px; */
     /* max-width: 33%; */
@@ -214,6 +218,7 @@
     font-size: 16px;
     line-height: 20px;
   }
+
 
 }
 

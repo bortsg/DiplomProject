@@ -96,7 +96,7 @@
   height: 24px;
   background-image: url('../../images/github-icon.png');
   background-size: contain;
- 
+
 }
 
 .footer__icon:nth-child(2) {
@@ -104,16 +104,13 @@
   height: 24px;
   background-image: url('../../images/facebook-icon.png');
   background-size: contain;
-  
+
 }
 
-/* .footer__icons_gh:hover {
-  fill: #913399;
+.footer__links:hover {
+  opacity: 0.8;
 }
 
-.footer__icons_fb:hover {
-  fill: #3B5998;
-} */
 
 @media (min-width: 768px) and (max-width: 1439px) {
   .footer {
@@ -130,7 +127,7 @@
     width: 380px;
     height: 22px;
     margin: 21px auto;
-    padding-left: 0;    
+    padding-left: 0;
   }
 
   .footer__icons {
@@ -139,7 +136,7 @@
     height: 20px;
     margin-right: 40px;
   }
-  
+
   .footer__icon {
     width: 20px;
     height: 20px;
@@ -150,7 +147,7 @@
   .footer {
     height: 224px;
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
     "nav icons"
     "copyright icons";
   }

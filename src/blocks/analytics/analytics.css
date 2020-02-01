@@ -54,6 +54,10 @@
   text-decoration: none;
 }
 
+.analytics__link:hover {
+  opacity: 0.5;
+}
+
 /* .analytics__link_state_active {
   border-bottom: 3px solid;
   text-decoration: none;

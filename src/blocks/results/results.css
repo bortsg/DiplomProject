@@ -78,11 +78,17 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
+
+  cursor: pointer;
 }
 
 .results__show-more:hover {
   background-color: #FFFFFF;
-  opacity: 0.8;
+  opacity: 0.5;
+}
+
+.results__analytics:hover {
+  opacity: 0.5;
 }
 
 
