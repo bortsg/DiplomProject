@@ -1,13 +1,12 @@
-
 @font-face {
   font-family: 'Roboto';
-  font-size: medium;
-  src: url('../../fonts/roboto-medium-webfont.woff') format('woff');
+  font-size: normal;
+  src: url('../../fonts/roboto-regular-webfont.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Source Sans Pro';
-  font-size: medium;
+  font-size: normal;
   src: url('../../fonts/source-sans-pro-regular.woff') format('woff');
 }
 
@@ -32,7 +31,7 @@
 
 .footer__copyright {
   height: 22px;
-  font-family: 'Roboto';
+  font-family: Roboto, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -55,7 +54,7 @@
 }
 
 .footer__links {
-  font-family: 'Source Sans Pro';
+  font-family: 'Source Sans Pro', Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;

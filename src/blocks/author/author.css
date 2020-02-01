@@ -10,12 +10,6 @@
   src: url('../../fonts/roboto-regular-webfont.woff') format('woff');
 }
 
-@font-face {
-  font-family: 'Roboto';
-  font-size: medium;
-  src: url('../../fonts/roboto-medium-webfont.woff') format('woff');
-}
-
 .author {
   width: 100%;
   background: #ffffff;
@@ -41,7 +35,7 @@
 
 .author__title {
   margin: 0;
-  font-family: 'Roboto Slab';
+  font-family: Robotoslab, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 40px;
@@ -52,7 +46,7 @@
 .author__text {
   max-width: 605px;
   margin: 24px 0 0 0;
-  font-family: 'Roboto';
+  font-family: Roboto, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;

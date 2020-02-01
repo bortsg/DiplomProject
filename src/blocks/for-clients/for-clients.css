@@ -1,3 +1,14 @@
+@font-face {
+  font-family: 'Robotoslab';
+  font-size: normal;
+  src: url('../../fonts/robotoslab-regular-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-size: normal;
+  src: url('../../fonts/roboto-regular-webfont.woff') format('woff');
+}
+
 .for-clients {
   width: 100%;
   background: #ffffff;
@@ -7,7 +18,7 @@
 .for-clients__title {
   max-width: 100%;
 
-  font-family: 'Roboto Slab';
+  font-family: Robotoslab, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 40px;
@@ -23,7 +34,7 @@
   margin-top: 23px;
   margin-left: 100px;
 
-  font-family: 'Roboto';
+  font-family: 'Roboto', Arial, sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 18px;

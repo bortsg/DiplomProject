@@ -1,3 +1,24 @@
+@font-face {
+  font-family: 'Robotoslab';
+  font-size: normal;
+  src: url('../../fonts/robotoslab-regular-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-size: normal;
+  src: url('../../fonts/roboto-regular-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-size: medium;
+  src: url('../../fonts/roboto-medium-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: 'Robotoslab';
+  font-size: bold;
+  src: url('../../fonts/RobotoSlab-Bold.woff') format('woff');
+}
+
 .phrase-block {
   width: 400px;
   height: 288px;
@@ -10,7 +31,7 @@
   margin-top: 24px;
   margin-left: 24px;
   margin-bottom: 16px;
-  font-family: Roboto;
+  font-family: Roboto, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -48,7 +69,7 @@
   margin-bottom: 2px;
   grid-area: name;
 
-  font-family: Roboto Slab;
+  font-family: Robotoslab, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 26px;
@@ -63,7 +84,7 @@
   margin-bottom: 0;
   grid-area: mail;
 
-  font-family: Roboto;
+  font-family: Roboto, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -76,7 +97,7 @@
   margin-left: 24px;
   margin-right: 24px;
 
-  font-family: Roboto;
+  font-family: Roboto, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -140,7 +161,7 @@
     margin-top: 16px;
     margin-left: 24px;
     margin-bottom: 8px;
-    font-family: Roboto;
+    font-family: Roboto, Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;

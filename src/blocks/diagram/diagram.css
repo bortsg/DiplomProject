@@ -1,5 +1,15 @@
-.diagram {
+@font-face {
+  font-family: 'Robotoslab';
+  font-size: normal;
+  src: url('../../fonts/robotoslab-regular-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-size: normal;
+  src: url('../../fonts/roboto-regular-webfont.woff') format('woff');
+}
 
+.diagram {
   background: #F5F6F7;
 }
 
@@ -12,7 +22,7 @@
 .diagram__title {
   margin-top: 0;
   margin-bottom: 0;
-  font-family: Roboto Slab;
+  font-family: Robotoslab, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 26px;
@@ -37,7 +47,7 @@
 
 .diagram__column-name {
   text-transform: uppercase;
-  font-family: Roboto;
+  font-family: Roboto, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -60,7 +70,7 @@
 
 .diagram__row-name {
   text-transform: uppercase;
-  font-family: Roboto;
+  font-family: Roboto, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -93,7 +103,7 @@
   margin-bottom: 0;
   height: 20px;
 
-  font-family: Roboto;
+  font-family: Roboto, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -121,7 +131,7 @@
   width: 104px;
   height: 24px;
 
-  font-family: Roboto;
+  font-family: Roboto, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -137,7 +147,7 @@
   height: 24px;
 
 
-  font-family: Roboto;
+  font-family: Roboto, Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
@@ -206,38 +216,38 @@
   .diagram__value_mnd {
     width: calc((100% - 104px)*0.15/0.73);
   }
-  
+
   .diagram__value_tsd {
     width: calc((100% - 104px)*0.18/0.73);
   }
-  
+
   .diagram__value_wdnsd {
     width: calc((100% - 104px)*0.11/0.73);
   }
-  
+
   .diagram__value_thrsd {
     width: calc((100% - 104px)*0.39/0.73);
   }
-  
+
   .diagram__value_frd {
     width: calc((100% - 104px)*0.45/0.73);
   }
-  
+
   .diagram__value_strd {
     width: calc((100% - 120px));
   }
-  
+
   .diagram__value_snd {
     width: calc((100% - 104px)*0.34/0.73);
   }
-  
+
 
 
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
   .diagram {
-   height: 480px; 
+   height: 480px;
   }
 
   .diagram__wrap {
@@ -293,27 +303,27 @@
   .diagram__value_mnd {
     width: calc((100% - 80px)*0.15/0.73);
   }
-  
+
   .diagram__value_tsd {
     width: calc((100% - 80px)*0.18/0.73);
   }
-  
+
   .diagram__value_wdnsd {
     width: calc((100% - 80px)*0.11/0.73);
   }
-  
+
   .diagram__value_thrsd {
     width: calc((100% - 80px)*0.39/0.73);
   }
-  
+
   .diagram__value_frd {
     width: calc((100% - 80px)*0.45/0.73);
   }
-  
+
   .diagram__value_strd {
     width: calc((100% - 80px));
   }
-  
+
   .diagram__value_snd {
     width: calc((100% - 80px)*0.34/0.73);
   }

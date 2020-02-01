@@ -16,6 +16,12 @@
   src: url('../../fonts/roboto-medium-webfont.woff') format('woff');
 }
 
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-size: medium;
+  src: url('../../fonts/source-sans-pro-regular.woff') format('woff');
+}
+
 .news {
   position: relative;
   display: grid;
@@ -52,7 +58,8 @@
 
 .news-item__title {
   /* margin-left: 24px; */
-  font-family: 'Robotoslab';
+  font-family: 'Robotoslab', Arial, sans-serif;
+  font-style: normal;
   font-size: 26px;
   max-width: 352px;
   height: 60px;
@@ -61,7 +68,8 @@
 
 .news-item__description {
   /* margin-left: 24px; */
-  font-family: 'Roboto';
+  font-family: 'Roboto', Arial, sans-serif;
+  font-style: normal;
   font-size: 16px;
   line-height: 22px;
   max-width: 352px;
@@ -71,7 +79,8 @@
 
 .news-item__source {
   /* margin-left: 24px; */
-  font-family: 'Robotoslab';
+  font-family: 'Robotoslab', Arial, sans-serif;
+  font-style: normal;
   font-size: 16px;
   line-height: 20px;
   font-weight: bold;
