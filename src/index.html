@@ -7,13 +7,20 @@
   <meta name="author" content="Тимур Цаган-Манджиев">
   <title>NewsAnalyzer</title>
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css%>">
-  <link rel="icon" href="src/images/favicon.png" type="image/png">
+  <link rel="icon" href="<%=require('./images/favicon.png').default%>" type="image/png">
 </head>
 
 <body>
   <div class="page">
 
     <div class="block">
+
+      <!-- <picture>
+        <source srcset="<%=require('./images/background.jpg').default%>">
+        <img src="<%=require('./images/background.jpg').default%>" alt="author avatar" class=""> -->
+
+
+
       <header class="header">
         <a href="./index.html" class="header__logo">NewsAnalyzer</a>
         <div class="header__links">
@@ -32,6 +39,8 @@
           <button type="submit" class="button search__button">Искать</button>
         </form>
       </section>
+
+      <!-- </picture> -->
     </div>
 
     <div class="preloader">
@@ -40,7 +49,7 @@
     </div>
 
     <section class="not-found">
-      <img src="src/images/not-found.svg" class="not-found__image" alt="not-found image">
+      <img src="<%=require('./images/not-found.svg').default%>" class="not-found__image" alt="not-found image">
       <h2 class="not-found__title">Ничего не найдено</h2>
       <h3 class="not-found__subtitle">К сожалению, по вашему запросу ничего не найдено</h3>
     </section>
@@ -54,7 +63,7 @@
 
       <div class="results__content news">
         <article class="news-item">
-          <img src="src/images/image_08.jpg" alt="news image" class="news-item__image">
+          <img src="<%=require('./images/image_08.jpg').default%>" alt="news image" class="news-item__image">
           <div class="news-item__date"> 2 августа, 2019</div>
           <h3 class="news-item__title">Национальное достояние - парки</h3>
           <p class="news-item__description"> В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
@@ -64,7 +73,7 @@
         </article>
 
         <article class="news-item">
-          <img src="src/images/image_08.jpg" alt="news image" class="news-item__image">
+          <img src="<%=require('./images/image_08.jpg').default%>" alt="news image" class="news-item__image">
           <div class="news-item__date"> 2 августа, 2019</div>
           <h3 class="news-item__title">Национальное достояние - парки</h3>
           <p class="news-item__description"> В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
@@ -74,7 +83,7 @@
         </article>
 
         <article class="news-item">
-          <img src="src/images/image_08.jpg" alt="news image" class="news-item__image">
+          <img src="<%=require('./images/image_08.jpg').default%>" alt="news image" class="news-item__image">
           <div class="news-item__date"> 2 августа, 2019</div>
           <h3 class="news-item__title">Национальное достояние - парки</h3>
           <p class="news-item__description"> В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
@@ -84,7 +93,7 @@
         </article>
 
         <article class="news-item">
-          <img src="src/images/image_08.jpg" alt="news image" class="news-item__image">
+          <img src="<%=require('./images/image_08.jpg').default%>" alt="news image" class="news-item__image">
           <div class="news-item__date"> 2 августа, 2019</div>
           <h3 class="news-item__title">Национальное достояние - парки</h3>
           <p class="news-item__description"> В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
@@ -94,7 +103,7 @@
         </article>
 
         <article class="news-item">
-          <img src="src/images/image_08.jpg" alt="news image" class="news-item__image">
+          <img src="<%=require('./images/image_08.jpg').default%>" alt="news image" class="news-item__image">
           <div class="news-item__date"> 2 августа, 2019</div>
           <h3 class="news-item__title">Национальное достояние - парки</h3>
           <p class="news-item__description"> В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
@@ -104,7 +113,7 @@
         </article>
 
         <article class="news-item">
-          <img src="src/images/image_08.jpg" alt="news image" class="news-item__image">
+          <img src="<%=require('./images/image_08.jpg').default%>" alt="news image" class="news-item__image">
           <div class="news-item__date"> 2 августа, 2019</div>
           <h3 class="news-item__title">Национальное достояние - парки</h3>
           <p class="news-item__description"> В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
@@ -123,8 +132,8 @@
     <section class="author">
       <picture>
         <!-- <source srcset="${require('./images/avatar.jpg')}"> -->
-        <source srcset="src/images/avatar.jpg">
-        <img src="src/images/avatar.jpg" alt="avatar" class="author__avatar">
+        <source srcset="<%=require('./images/avatar.jpg').default%>">
+        <img src="<%=require('./images/avatar.jpg').default%>" alt="author avatar" class="author__avatar">
       </picture>
 
 
@@ -138,11 +147,6 @@
     </section>
 
     <footer class="footer">
-
-      <!-- <div class="footer__wrapper"> -->
-
-
-
       <a href="" class="footer__copyright">&copy;2019 Supersite</a>
 
       <ul class="footer__navigation">
@@ -155,9 +159,6 @@
         <a href="https://github.com" class="footer__icon"> </a>
         <a href="https://facebook.com" class="footer__icon"> </a>
       </div>
-
-      <!-- </div> -->
-
     </footer>
 
   </div>
