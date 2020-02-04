@@ -7,7 +7,7 @@ const presets = [
       firefox: "60",
       chrome: "64",
       chromeAndroid: "64",
-      safari: "11.1",
+      safari: "11.1"
     },
     useBuiltIns: "usage", // эта настройка babel-polyfill, если стоит значение usage, то будут подставлятся полифилы для версий браузеров которые указали выше.
     corejs: "3.0.0", // явно проставить версию corejs
