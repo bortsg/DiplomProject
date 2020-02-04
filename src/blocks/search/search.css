@@ -117,7 +117,7 @@
   }
 
   .search__subtitle {
-    max-width: 385px;
+    max-width: 450px;
     height: 72px;
     margin: 16px auto 24px 162px;
   }
@@ -127,6 +127,11 @@
     height: 56px;
     margin: 0 auto auto auto;
   }
+
+  .search__button {
+    width: 156px;
+  }
+
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
@@ -145,8 +150,8 @@
 
   .search__subtitle {
     max-width: 288px;
-    height: 130px;
-    margin: 56px auto 24px;
+    height: 168px;
+    margin: 18px auto 24px;
     font-size: 20px;
     line-height: 26px;
   }
@@ -161,6 +166,8 @@
   .search__input {
     width: 288px;
     height: 56px;
+    padding-left: 16px;
+    letter-spacing: 1px;
   }
 
   .search__button {

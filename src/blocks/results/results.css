@@ -128,6 +128,8 @@
   .results__show-more {
     margin: 34px auto 38px auto;
     position: relative;
+    width: 246px;
+    height: 54px;
   }
 }
 

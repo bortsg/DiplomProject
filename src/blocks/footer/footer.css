@@ -155,8 +155,7 @@
     grid-area: copyright;
     height:22px;
     max-width: 200px;
-    margin: 0;
-    margin-left: 16px;
+    margin: 18px 0 0 16px;
   }
 
   .footer__navigation {
