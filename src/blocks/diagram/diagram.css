@@ -85,11 +85,23 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: calc((100%-104px)/4);
+  /* width: calc((100%-104px)/4); */
   margin-left: 104px;
   width: calc(100% - 104px);
-  padding-top: 2px;
+  padding-top: 10px;
 }
+
+.diagram__row-values-low {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* width: calc((100%-104px)/4); */
+  margin-left: 104px;
+  width: calc(100% - 104px);
+  padding-top: 0px;
+}
+
+
 
 .diagram__row-value {
   margin-top: 0;
@@ -110,7 +122,7 @@
 .diagram__chart {
   display: flex;
   flex-direction: column;
-  height: 544px;
+  height: 535px;
   justify-content: space-between;
 }
 
@@ -203,7 +215,7 @@
   }
 
   .diagram__chart {
-    height: 510px;
+    height: 500px;
   }
 
   .diagram__pair-date-value {
@@ -212,6 +224,11 @@
 
   .diagram__row-values {
     margin-left: 120px;
+  }
+
+  .diagram__row-values-low {
+    margin-left: 120px;
+    padding-top: 20px;
   }
 
   .diagram__date {
@@ -284,6 +301,10 @@
   }
 
   .diagram__row-values {
+    display: none;
+  }
+
+  .diagram__row-values-low {
     display: none;
   }
 
