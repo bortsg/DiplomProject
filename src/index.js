@@ -1,23 +1,14 @@
 import "./pages/index.css";
+import NewsApi from './js/modules/NewsApi.js'
 
 
-const now = new Date();
-const dayPrevious= 7;
-const dayInMilliseconds = 24*60*60*1000;
-const before = new Date(now.getTime() - (dayPrevious-1)*dayInMilliseconds); // already in milliseconds
-const nowInApiFormat = `${now.getFullYear()}-${now.getMonth() + 1}-${now.getDate()}`;
-const beforeInApiFormat = `${before.getFullYear()}-${before.getMonth() + 1}-${before.getDate()}`;
-const pageSize = 100;
 
 
 function validateForm() {
   // После сабмита формы производится валидация. Если в поле не введён текст, выводится ошибка
   // «Нужно ввести ключевое слово»
 
-
   //ЧТО ПРОИСХОДИТ ЕСЛИ ВВОДИТЬ ЦИФРЫ В ПОЛЕ ПОИСКА?!
-
-
 }
 
 function showResultsBlock() {
@@ -61,7 +52,7 @@ function createCard(data) {
 
   const date = data.articles[1].publishedAt;
   const parsedDate = Date.parse(date);
-  
+
   const formatter = new Intl.DateTimeFormat("ru", {
     year: "numeric",
     month: "long",
@@ -76,7 +67,7 @@ function createCard(data) {
 
   const card = document.createElement('article');
   card.classList.add('news-item');
-[]
+
   const newsImage = document.createElement('img');
   newsImage.classList.add('news-item__image');
 
@@ -120,44 +111,14 @@ document.querySelector('.search__field').addEventListener('submit', () => {
 
   // validateForm();
 
-  const query = document.querySelector('.search__input').value;
+  const searchInput = document.querySelector('.search__input').value;
+  const newsApi = new NewsApi();
+  console.log(newsApi.getNews(searchInput));
+  console.log(localStorage);
 
-  fetch(`${apiData.url}q=${query}&${apiData.urlParam}`)
-    .then(function (res) {
-      if (res.ok) {
 
-        showResultsBlock();
-
-        // console.log('ok');
-        return res.json();
-      }
-      return Promise.reject(`Код ошибки: ${res.status}`);
-    })
-    .then((data) => {
-      console.log(data);
-      // console.log(data.totalResults);
-      // console.log(data.articles[1]);
-      // настроить хранение localStorage
-
-      if (data.totalResults===0) {
-      // если ничего не найдено
-        showNotFoundResults();
-      }
-
-      createCard(data);
-      // showCards();
-    })
-    .catch((err) => {
-      console.log(err);
-      // showErrorResults();
-    });
 });
 
-const apiKey = '0caee48c106d4eb5a5e92f2d5bb306e9';
-const apiData = {
-    url: 'https://newsapi.org/v2/everything?',
-    urlParam: `language=ru&from=${nowInApiFormat}&to=${beforeInApiFormat}&pageSize=${pageSize}&apiKey=${apiKey}`
-}
 
 
 
