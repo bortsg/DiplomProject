@@ -19,6 +19,7 @@ class NewsApi {
   constructor() {
   }
 
+  // метод getNews получает список новостей по заданному слову, и записывает их в localStorage
   getNews(searchInput){
     // this.searchInput = this.searchInput;
     // const searchInput = document.querySelector('.search__input').value;
@@ -43,13 +44,15 @@ class NewsApi {
       // если ничего не найдено
       // showNotFoundResults();
       }
-      console.log(data);
+
       console.log(data.articles);
+
       for (let i=0; i< data.articles.length; i++) {
-        localStorage.setItem([i],  data.articles[i] );
+        localStorage.setItem([i], JSON.stringify(data.articles[i]));
       }
 
-      // return data.status;
+      return data.articles;
+
       // createCard(data);
       // showCards();
     })
