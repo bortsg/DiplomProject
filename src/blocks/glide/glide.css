@@ -1,3 +1,6 @@
+@import url('./glide.core.min.css');
+@import url('./glide.theme.min.css');
+
 .glide {
   width: 100px;
   height: 288px;
