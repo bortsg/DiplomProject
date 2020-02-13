@@ -2,16 +2,16 @@
 @import url('../blocks/page/page.css');
 @import url('../blocks/block/block.css');
 @import url('../blocks/header/header.css');
-@import url('../blocks/search/search.css');
-@import url('../blocks/results/results.css');
-@import url('../blocks/author/author.css');
+/* @import url('../blocks/search/search.css'); */
+/* @import url('../blocks/results/results.css'); */
+/* @import url('../blocks/author/author.css'); */
 @import url('../blocks/footer/footer.css');
 @import url('../blocks/font/font.css');
-@import url('../blocks/for-clients/for-clients.css');
-@import url('../blocks/about/about.css');
-@import url('../blocks/techs/techs.css');
-@import url('../blocks/not-found/not-found.css');
-@import url('../blocks/phrase-block/phrase-block.css');
+/* @import url('../blocks/for-clients/for-clients.css'); */
+/* @import url('../blocks/about-style/about-style.css'); */
+/* @import url('../blocks/techs/techs.css'); */
+/* @import url('../blocks/not-found/not-found.css'); */
+/* @import url('../blocks/phrase-block/phrase-block.css'); */
 @import url('../blocks/analytics/analytics.css');
 @import url('../blocks/diagram/diagram.css');
-@import url('../blocks/news/news.css');
+/* @import url('../blocks/news/news.css'); */

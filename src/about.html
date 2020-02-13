@@ -6,22 +6,16 @@
   <title>About</title>
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.about.css%>">
   <link rel="icon" href="<%=require('./images/favicon.png').default%>" type="image/png">
-
-  <!-- <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
-  <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css"> -->
-
-  <!-- <link rel="stylesheet" href="blocks/glide/glide.core.min.css" >
-  <link rel="stylesheet" href="blocks/glide/glide.theme.min.css" > -->
 </head>
 
 <body>
   <div class="page">
 
-    <header class="header about">
-      <a href="./index.html" class="header__logo about">NewsAnalyzer</a>
+    <header class="header about-style">
+      <a href="./index.html" class="header__logo about-style">NewsAnalyzer</a>
       <div class="header__links">
-        <a href="./index.html" class="about header__link header__link_main header__link_state_inactive">Главная</a>
-        <a href="./about.html" class="about header__link header__link_about header__link_state_active ">О проекте</a>
+        <a href="./index.html" class="about-style header__link header__link_main header__link_state_inactive">Главная</a>
+        <a href="./about.html" class="about-style header__link header__link_about header__link_state_active ">О проекте</a>
       </div>
     </header>
 
@@ -59,9 +53,7 @@
             <div class="techs__image techs__image_wp"></div>
           </div>
         </div>
-
       </section>
-
 
       <section class="author">
         <picture>
@@ -75,8 +67,6 @@
             какими технологиями разработки владете.</p>
             <p class="author__text">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь
             потенциальным заказчикам. Если хотите, оставьте свои контакты: email и телефон. Так заказчики смогут с вами связаться.</p>
-
-
         </div>
       </section>
 
@@ -161,13 +151,10 @@
             <button class="glide__bullet" data-glide-dir="=3"> </button>
             <button class="glide__bullet" data-glide-dir="=4"> </button>
           </div>
-
         </div>
 
         <a href="#" class="commit-story__button-gh">Открыть в Github</a>
       </section>
-
-
     </main>
 
     <footer class="footer">
@@ -184,43 +171,9 @@
         <a href="https://facebook.com" class="footer__icon"> </a>
       </div>
     </footer>
-
   </div>
 
-  <!-- <script src="<%= htmlWebpackPlugin.files.chunks.about.entry %>"></script> -->
-  <!-- <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script> -->
-  <!-- <script>
-
-    // const config = {
-    //   type: 'slider',
-    //   startAt: 0,
-    //   perView: 3.5,
-    // }
-
-    // new Glide('.glide',config).mount()
-
-    new Glide('.glide', {
-      // type: 'slider',
-      // startAt: 0,
-      // perView: 3.5,
-      type: 'carousel',
-      perView: 3.4,
-      focusAt: 'center',
-      breakpoints: {
-        1439: {
-          perView: 2.2,
-          focusAt: 1,
-        },
-        767: {
-          perView: 1,
-          focusAt: 1     }
-      }
-    }).mount()
-
-
-
-  </script> -->
-
   <script src="<%= htmlWebpackPlugin.files.chunks.about.entry %>"></script>
+
 </body>
 </html>
