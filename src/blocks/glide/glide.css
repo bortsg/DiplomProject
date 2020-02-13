@@ -1,5 +1,8 @@
+@import url('./glide.core.min.css');
+@import url('./glide.theme.min.css');
+
 .glide {
-  width: 100px;
+  width: 100%;
   height: 288px;
 
   display: flex;
@@ -16,7 +19,7 @@
 }
 
 .glide__slides {
-  width: 400px;
+  /* width: 400px; */
   height: 288px;
   margin-top: 0;
 }
@@ -134,7 +137,7 @@
   }
 
   .glide__slides {
-    width: 336px;
+    /* width: 336px; */
     height: 242px;
   }
 
@@ -162,7 +165,7 @@
 
 @media (min-width: 320px) and (max-width: 767px) {
   .glide__slides {
-    width: 288px;
+    /* width: 288px; */
     height: 264px;
   }
 
