@@ -106,16 +106,40 @@ function showErrorResults() {
 
 }
 
+
+// localStorage.clear();
+
+
 document.querySelector('.search__field').addEventListener('submit', () => {
   event.preventDefault();
 
   // validateForm();
 
   const searchInput = document.querySelector('.search__input').value;
-  const newsApi = new NewsApi();
-  console.log(newsApi.getNews(searchInput));
-  console.log(localStorage);
 
+
+  const newsApi = new NewsApi();
+  const listOfNews = newsApi.getNews(searchInput);
+  // console.log(listOfNews);
+
+  // console.log(localStorage.getItem([1]));
+
+  // for(let i=0; i<localStorage.length; i++) {
+  //   let key = localStorage.key(i);
+  //   console.log(`${key}: ${localStorage.getItem(key)}`);
+  // }
+
+
+  let keys = Object.keys(localStorage);
+  for(let key of keys.sort()) {
+    console.log(`${key}: ${localStorage.getItem(key)}`);
+  }
+
+  console.log('число статей: ' + localStorage.length);
+
+  if (localStorage.length) {
+    console.log('пора сделать карточки');
+  }
 
 });
 
