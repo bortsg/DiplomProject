@@ -1,5 +1,7 @@
 # DiplomProject
 
+Проект на gh-pages:
+https://bortsg.github.io/DiplomProject.github.io
 
 Для установки проекта:
 1. Скачайте файлы проекта на свой компьтер
