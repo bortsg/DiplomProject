@@ -1,0 +1,168 @@
+@font-face {
+  font-family: 'Robotoslab';
+  font-size: normal;
+  src: url('../../fonts/robotoslab-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-size: normal;
+  src: url('../../fonts/roboto-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-size: medium;
+  src: url('../../fonts/roboto-medium-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Robotoslab';
+  font-size: bold;
+  src: url('../../fonts/RobotoSlab-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Source-Sans-pro';
+  font-size: normal;
+  src: url('../../fonts/source-sans-pro-regular.woff') format('woff');
+}
+
+
+.analytics {
+  color: black;
+  max-width: 100%;
+}
+
+.analytics__links {
+  width: 712px;
+  height: 24px;
+  margin-top: 40px;
+  margin-left: 104px;
+
+
+  font-family: Roboto, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1A1B22;
+
+}
+
+.analytics__link {
+  text-decoration: none;
+}
+
+.analytics__link:hover {
+  opacity: 0.5;
+}
+
+/* .analytics__link_state_active {
+  border-bottom: 3px solid;
+  text-decoration: none;
+} */
+
+.analytics__link_state_inactive {
+  color: #B6BCBF;
+}
+
+.analytics__summary {
+  margin-left: 104px;
+  margin-top: 80px;
+}
+
+.analytics__title {
+  font-family: Robotoslab, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46px;
+  color: #1A1B22;
+  margin-top: 0px;
+  /* letter-spacing: 3px; */
+  /* margin-bottom: 24px; */
+}
+
+.analytics__per-week {
+  font-family: Roboto, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1A1B22;
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+.analytics__per-week_volume {
+  font-family: Roboto, Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1A1B22;
+}
+
+.analytics__mentions {
+  font-family: Roboto, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1A1B22;
+  margin-top: 0;
+  margin-bottom: 80px;
+}
+
+.analytics__mentions_volume {
+  font-weight: bold;
+}
+
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .analytics__links {
+    margin-top: 32px;
+    margin-left: 40px;
+  }
+
+  .analytics__title {
+    font-size: 32px;
+    line-height: 34px;
+  }
+
+  .analytics__summary {
+    /* margin-top: 64px; */
+    margin: 64px auto 0 40px;
+  }
+
+
+ .analytics__mentions {
+    margin-bottom: 40px;
+  }
+
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+  .analytics__links {
+    display: none;
+  }
+
+  .analytics__summary {
+    /* margin-top: 64px; */
+    width: 90%;
+    margin: 16px auto 0 auto;
+  }
+
+  .analytics__title {
+    height: 68px;
+    font-size: 30px;
+    line-height: 34px;
+  }
+
+  .analytics__mentions {
+    margin-bottom: 20px;
+  }
+
+}

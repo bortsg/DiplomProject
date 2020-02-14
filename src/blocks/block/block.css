@@ -1,0 +1,22 @@
+.block {
+  width: 100%;
+  position: relative;
+  background-image: url(../../images/background.jpg);
+  background-size: cover;
+  color: white;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+@media (min-width: 768px) and (max-width: 1439px) {
+
+}
+
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .block {
+    background-position-x: center;
+  }
+}

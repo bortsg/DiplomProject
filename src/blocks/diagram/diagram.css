@@ -1,0 +1,365 @@
+@font-face {
+  font-family: 'Robotoslab';
+  font-size: normal;
+  src: url('../../fonts/robotoslab-regular-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-size: normal;
+  src: url('../../fonts/roboto-regular-webfont.woff') format('woff');
+}
+
+.diagram {
+  background: #F5F6F7;
+}
+
+.diagram__wrap {
+  margin: 0 104px 0px 104px;
+  padding-top: 80px;
+  padding-bottom: 70px;
+}
+
+.diagram__title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: Robotoslab, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 30px;
+  color: #1A1B22;
+
+  width: 100%;
+  /* letter-spacing: 3px; */
+}
+
+.diagram__coordinate-axis {
+  width: 100%;
+  /* height: 50px; */
+  margin-top: 48px;
+  display: flex;
+  flex-direction: row;
+  /* margin-bottom: 15px; */
+  border-bottom: 1px solid #1A1B22;
+
+}
+
+.diagram__column-name {
+  text-transform: uppercase;
+  font-family: Roboto, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  /* letter-spacing: 0.4px; */
+  color: #B6BCBF;
+  width: 60px ;
+  margin-top: 0;
+  margin-right: 44px;
+
+  /* height: 40px; */
+  height: 100%;
+  text-align: start;
+  /* display: inline; */
+  margin-bottom: 16px;
+}
+
+.diagram__row-name {
+  text-transform: uppercase;
+  font-family: Roboto, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  /* letter-spacing: 0.4px; */
+  color: #B6BCBF;
+
+  width: 50%;
+  height: 100%;
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.diagram__row-values {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* width: calc((100%-104px)/4); */
+  margin-left: 104px;
+  width: calc(100% - 104px);
+  padding-top: 10px;
+}
+
+.diagram__row-values-low {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* width: calc((100%-104px)/4); */
+  margin-left: 104px;
+  width: calc(100% - 104px);
+  padding-top: 0px;
+}
+
+
+
+.diagram__row-value {
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 20px;
+
+  font-family: Roboto, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  /* letter-spacing: 0.4px; */
+  text-transform: uppercase;
+  color: #B6BCBF;
+}
+
+.diagram__chart {
+  display: flex;
+  flex-direction: column;
+  height: 535px;
+  justify-content: space-between;
+}
+
+.diagram__pair-date-value {
+  display: flex;
+  flex-direction: row;
+}
+
+.diagram__date {
+  /* grid-area: date; */
+  width: 104px;
+  height: 24px;
+
+  font-family: Roboto, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  /* line-height: 80px; */
+}
+
+.diagram__value {
+  grid-area: value;
+  margin-left: 0px;
+  background: #2F71E5;
+  color: white;
+  /* width: calc(100%-104px); */
+  height: 24px;
+
+
+  font-family: Roboto, Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  /* or 133% */
+
+  display: flex;
+  align-items: center;
+  /* letter-spacing: 0.4px; */
+  text-transform: uppercase;
+
+
+}
+
+.diagram__value_mnd {
+  /* width: calc((100% - 104px)*0.15); */
+  width: calc((100% - 0px)*0.15);
+}
+
+.diagram__value_tsd {
+  /* width: calc((100% - 104px)*0.18); */
+  width: calc((100% - 0px)*0.18);
+}
+
+.diagram__value_wdnsd {
+  /* width: calc((100% - 104px)*0.11); */
+  width: calc((100% - 0px)*0.11);
+}
+
+.diagram__value_thrsd {
+  /* width: calc((100% - 104px)*0.39); */
+  width: calc((100% - 0px)*0.39);
+}
+
+.diagram__value_frd {
+  /* width: calc((100% - 104px)*0.45); */
+  width: calc((100% - 0px)*0.45);
+}
+
+.diagram__value_strd {
+  /* width: calc((100% - 104px)*0.73); */
+  width: calc((100% - 0px)*0.73);
+}
+
+.diagram__value_snd {
+  /* width: calc((100% - 104px)*0.34); */
+  width: calc((100% - 0px)*0.34);
+}
+
+
+
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .diagram__wrap {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 0px;
+    height: 750px;
+  }
+
+  .diagram__chart {
+    height: 500px;
+  }
+
+  .diagram__pair-date-value {
+    height: 24px;
+  }
+
+  .diagram__row-values {
+    margin-left: 120px;
+  }
+
+  .diagram__row-values-low {
+    margin-left: 120px;
+    padding-top: 20px;
+  }
+
+  .diagram__date {
+    width: 120px;
+  }
+
+  .diagram__value_mnd {
+    /* width: calc((100% - 104px)*0.15/0.73); */
+    width: calc((100% - 120px)*0.15/0.73);
+  }
+
+  .diagram__value_tsd {
+    /* width: calc((100% - 104px)*0.18/0.73); */
+    width: calc((100% - 120px)*0.18/0.73);
+  }
+
+  .diagram__value_wdnsd {
+    /* width: calc((100% - 104px)*0.11/0.73); */
+    width: calc((100% - 120px)*0.11/0.73);
+  }
+
+  .diagram__value_thrsd {
+    /* width: calc((100% - 104px)*0.39/0.73); */
+    width: calc((100% - 120px)*0.39/0.73);
+  }
+
+  .diagram__value_frd {
+    /* width: calc((100% - 104px)*0.45/0.73); */
+    width: calc((100% - 120px)*0.45/0.73);
+  }
+
+  .diagram__value_strd {
+    /* width: calc((100% - 120px)); */
+    width: calc((100% - 120px));
+  }
+
+  .diagram__value_snd {
+    /* width: calc((100% - 104px)*0.34/0.73); */
+    width: calc((100% - 120px)*0.34/0.73);
+  }
+
+
+
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .diagram {
+   height: 480px;
+  }
+
+  .diagram__wrap {
+    width: 90%;
+    padding-top: 24px;
+    margin: 0 auto;
+    /* height: 312px; */
+  }
+
+  .diagram__title {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .diagram__coordinate-axis {
+    margin-top: 15px;
+    height: 40px;
+  }
+
+  .diagram__column-name {
+    margin-right: 20px;
+  }
+
+  .diagram__row-values {
+    display: none;
+  }
+
+  .diagram__row-values-low {
+    display: none;
+  }
+
+  .diagram__chart {
+    height: 312px;
+  }
+
+  .diagram__pair-date-value {
+    height: 20px;
+
+  }
+
+  .diagram__chart {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .diagram__date {
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 80px;
+  }
+
+  .diagram__value {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .diagram__value_mnd {
+    width: calc((100% - 80px)*0.15/0.73);
+  }
+
+  .diagram__value_tsd {
+    width: calc((100% - 80px)*0.18/0.73);
+  }
+
+  .diagram__value_wdnsd {
+    width: calc((100% - 80px)*0.11/0.73);
+  }
+
+  .diagram__value_thrsd {
+    width: calc((100% - 80px)*0.39/0.73);
+  }
+
+  .diagram__value_frd {
+    width: calc((100% - 80px)*0.45/0.73);
+  }
+
+  .diagram__value_strd {
+    width: calc((100% - 80px));
+  }
+
+  .diagram__value_snd {
+    width: calc((100% - 80px)*0.34/0.73);
+  }
+
+
+}

@@ -1,0 +1,14 @@
+
+.DS-store
+thumbs.db
+/.idea
+/.sublime
+/.vscode
+
+*.log
+npm-debug.log*
+
+/node_modules
+/dist
+
+/.npm

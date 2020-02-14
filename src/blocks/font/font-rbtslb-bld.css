@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Robotoslab';
+  font-size: bold;
+  src: url('../../fonts/RobotoSlab-Bold.woff') format('woff');
+}
+
+.font-rbtslb-bld {
+  font-family: 'Robotoslab';
+  font-weight: bold;
+}
+

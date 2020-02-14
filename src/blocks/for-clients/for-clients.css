@@ -1,0 +1,86 @@
+@font-face {
+  font-family: 'Robotoslab';
+  font-size: normal;
+  src: url('../../fonts/robotoslab-regular-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-size: normal;
+  src: url('../../fonts/roboto-regular-webfont.woff') format('woff');
+}
+
+.for-clients {
+  width: 100%;
+  background: #ffffff;
+  margin: 80px auto 94px auto;
+}
+
+.for-clients__title {
+  max-width: 100%;
+
+  font-family: Robotoslab, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46px;
+  letter-spacing: 0px;
+  color: #1A1B22;
+  margin: 0 0 0 100px;
+}
+
+.for-clients__text {
+  max-width: 815px;
+  margin: 0;
+  margin-top: 23px;
+  margin-left: 100px;
+
+  font-family: 'Roboto', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 24px;
+
+  color: #1A1B22;
+}
+
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .for-clients {
+    margin: 30px auto 56px auto;
+  }
+
+  .for-clients__title {
+    margin-left: 42px;
+    font-size: 30px;
+    line-height: 34px;
+    letter-spacing: 0px;
+  }
+
+  .for-clients__text {
+    margin-left: 42px;
+    margin-right: 40px;
+  }
+
+
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .for-clients {
+    margin: 20px auto 36px auto;
+    max-height: 1126px;
+  }
+
+  .for-clients__title {
+    font-size: 30px;
+    line-height: 40px;
+    margin-left: 16px;
+    letter-spacing: 0px;
+  }
+
+  .for-clients__text {
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 16px;
+  }
+
+}

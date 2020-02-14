@@ -1,0 +1,131 @@
+@font-face {
+  font-family: 'Robotoslab';
+  font-size: normal;
+  src: url('../../fonts/robotoslab-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-size: normal;
+  src: url('../../fonts/roboto-regular-webfont.woff') format('woff');
+}
+
+.author {
+  width: 100%;
+  background: #ffffff;
+  display: flex;
+  /* border: 1px solid purple; */
+}
+
+.author__avatar {
+  max-width: 464px;
+  height: 464px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  margin-left: 104px;
+  background-image: url('../../images/avatar.jpg');
+  background-size: cover;
+  border-radius: 1000px;
+}
+
+.author__info {
+  margin-top: 130px;
+  margin-left: 55px;
+}
+
+.author__title {
+  margin: 0;
+  font-family: Robotoslab, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46px;
+  color: #1A1B22;
+}
+
+.author__text {
+  max-width: 605px;
+  margin: 24px 0 0 0;
+  font-family: Roboto, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1A1B22;
+}
+
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .author {
+    /* margin-top: 40px; */
+    /* margin-bottom: 66px; */
+    height: 356px;
+  }
+
+  .author__avatar {
+    max-width: 232px;
+    height: 232px;
+    /* margin: 40px 32px 40px 40px; */
+    margin: 60px 32px 40px 40px;
+  }
+
+  .author__info {
+    max-width: 80%;
+    margin-top: 42px;
+    margin-right: auto;
+    margin-left: 0;
+
+  }
+
+  .author__title {
+    max-width: 424px;
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 16px;
+  }
+
+  .author__text {
+    max-width: 90%;
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .author {
+    max-width: 320px;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .author__avatar {
+    max-width: 272px;
+    height: 272px;
+    margin: 32px 24px 24px 24px;
+  }
+
+  .author__info {
+    margin-top: 0px;
+    margin-right: 16px;
+    margin-left: 16px;
+    margin-bottom: 32px;
+  }
+
+  .author__title {
+    max-width: 288px;
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 12px;
+  }
+
+  .author__text {
+    max-width: 288px;
+    max-height: 360px;
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 0px;
+  }
+}

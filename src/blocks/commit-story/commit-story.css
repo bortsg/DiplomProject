@@ -1,0 +1,140 @@
+@font-face {
+  font-family: 'Robotoslab';
+  font-size: normal;
+  src: url('../../fonts/robotoslab-regular-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-size: normal;
+  src: url('../../fonts/roboto-regular-webfont.woff') format('woff');
+}
+
+.commit-story {
+  width: 100%;
+  height: 606px;
+  background: #F5F6F7;
+}
+
+.commit-story__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 72px;
+
+  /* border: 1px solid purple; */
+}
+
+.commit-story__title {
+  /* margin: 0; */
+  max-width: 712px;
+  height: 46px;
+  margin: 0 auto 64px 104px;
+  font-family: Robotoslab, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46px;
+  /* letter-spacing: 4px; */
+}
+
+.commit-story__gh {
+  max-width: 161px;
+  height: 24px;
+  margin: 14px 120px 68px auto;
+  text-decoration: none;
+  color: #1A1B22;
+  font-family: Roboto, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.commit-story__gh:hover {
+  opacity: 0.5;
+}
+
+.commit-story__button-gh {
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .commit-story {
+    height: 464px;
+  }
+
+  .commit-story__header {
+    padding-top: 40px;
+  }
+
+  .commit-story__title {
+    width: 330px;
+    margin-left: 40px;
+    font-size: 30px;
+    line-height: 34px;
+    height: 36px;
+  }
+
+  .commit-story__gh {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    width: 161px;
+    margin: 6px 56px 68px auto;
+  }
+
+  .commit-story__button-gh {
+    display: none;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .commit-story {
+    height: 574px;
+  }
+
+  .commit-story__header {
+    /* height: 166px; */
+    padding-top: 32px;
+    flex-direction: column;
+
+  }
+
+  .commit-story__title {
+    margin: 0 auto 16px 16px;
+    /* margin-left: 16px; */
+    width:170px;
+    height: 120px;
+    font-size: 30px;
+    line-height: 40px;
+    /* letter-spacing: 1px; */
+  }
+
+  .commit-story__gh {
+    display: none;
+  }
+
+  .commit-story__button-gh {
+    display: flex;
+    justify-content: center;
+    width: 288px;
+    height: 56px;
+    font-family: Roboto, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    text-decoration: none;
+    margin: 40px auto 32px;
+    border: solid 1px black;
+    border-radius: 100px;
+    align-items: center;
+    text-align: center;
+    color: black;
+  }
+
+  .commit-story__button-gh:hover {
+    /* background-color: black; */
+    opacity: 0.3;
+  }
+}
