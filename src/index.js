@@ -1,5 +1,6 @@
-import "./pages/index.css";
+import "./pages/index.css"
 import NewsApi from './js/modules/NewsApi.js'
+import NewsCardList from './js/components/NewsCardList'
 
 
 
@@ -107,39 +108,46 @@ function showErrorResults() {
 }
 
 
-// localStorage.clear();
 
+
+// showResultsBlock();
 
 document.querySelector('.search__field').addEventListener('submit', () => {
   event.preventDefault();
 
+  showResultsBlock();
+  localStorage.clear();
+
   // validateForm();
 
   const searchInput = document.querySelector('.search__input').value;
-
-
   const newsApi = new NewsApi();
-  const listOfNews = newsApi.getNews(searchInput);
-  // console.log(listOfNews);
+  newsApi.getNews(searchInput)
+    .then ( (data) => {
+      // let keys = Object.keys(localStorage);
+      // for(let key of keys.sort()) {
+      //   console.log(`${key}: ${localStorage.getItem(key)}`);
+      // }
+      const newsCardList = new NewsCardList;
+      newsCardList.render();
+    });
 
-  // console.log(localStorage.getItem([1]));
 
-  // for(let i=0; i<localStorage.length; i++) {
-  //   let key = localStorage.key(i);
+
+  // const listOfNews = newsApi.getNews(searchInput);
+
+  // срабатывает асинхронность запроса - fetch из вызванной getnews не успевает вернуть результат,
+  // когда уже вызывается этот кусок кода, поэтому выводится пустое значение при первом вызове
+  // а также значение с предыдущего вызова при всех последующих
+
+  // let keys = Object.keys(localStorage);
+  // for(let key of keys.sort()) {
   //   console.log(`${key}: ${localStorage.getItem(key)}`);
   // }
 
-
-  let keys = Object.keys(localStorage);
-  for(let key of keys.sort()) {
-    console.log(`${key}: ${localStorage.getItem(key)}`);
-  }
-
-  console.log('число статей: ' + localStorage.length);
-
-  if (localStorage.length) {
-    console.log('пора сделать карточки');
-  }
+  // if (localStorage.length) {
+  //   console.log('пора сделать карточки');
+  // }
 
 });
 
