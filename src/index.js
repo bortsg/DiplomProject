@@ -17,17 +17,37 @@ function showResultsBlock() {
   // заголовок «Результаты»,
   // прелоудер.
 
+  document.querySelector('.results').setAttribute('style', 'display:flex');
   document.querySelector('.results__content').setAttribute('style', 'display:none');
   document.querySelector('.results__analytics').setAttribute('style', 'display:none');
   document.querySelector('.results__show-more').setAttribute('style', 'display:none');
   document.querySelector('.not-found').setAttribute('style', 'display:none');
 }
 
-function showNotFoundResults() {
-  // если ничего не найдено (data.results.length == 0) - на месте прелоудера надпись «Ничего не найдено»
+function hideResultsBlock() {
+  // убрать от показа блок с результатами
+  document.querySelector('.results').setAttribute('style', 'display:none');
+}
+
+// проверить какой display: надо выставлять!!!!
+function showPreloader() {
+  document.querySelector('.preloader').setAttribute('style', 'display:inline');
+}
+
+function hidePreloader() {
   document.querySelector('.preloader').setAttribute('style', 'display:none');
+}
+
+function showNotFound() {
+  // если ничего не найдено (data.results.length == 0) - на месте прелоудера надпись «Ничего не найдено»
+
   document.querySelector('.not-found').setAttribute('style', 'display:flex');
 }
+
+function hideNotFound() {
+  document.querySelector('.not-found').setAttribute('style', 'display:none');
+}
+
 
 function createCard(data) {
   console.log(data.articles[1]);
@@ -109,13 +129,16 @@ function showErrorResults() {
 
 
 
-
-// showResultsBlock();
+hideResultsBlock();
+hidePreloader();
+hideNotFound();
 
 document.querySelector('.search__field').addEventListener('submit', () => {
   event.preventDefault();
 
+  showPreloader();
   showResultsBlock();
+
   localStorage.clear();
 
   // validateForm();
@@ -128,7 +151,11 @@ document.querySelector('.search__field').addEventListener('submit', () => {
       // for(let key of keys.sort()) {
       //   console.log(`${key}: ${localStorage.getItem(key)}`);
       // }
-      const newsCardList = new NewsCardList;
+
+      hidePreloader();
+
+      console.log(data);
+      const newsCardList = new NewsCardList();
       newsCardList.render();
     });
 

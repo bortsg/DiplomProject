@@ -39,7 +39,7 @@ export default class NewsApi {
         // showNotFoundResults(); // если ничего не найдено
       }
 
-      console.log(data.articles);
+      // console.log(data.articles);
 
       for (let i=0; i< data.articles.length; i++) {
         localStorage.setItem([i], JSON.stringify(data.articles[i]));
