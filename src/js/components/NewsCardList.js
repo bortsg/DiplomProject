@@ -5,24 +5,28 @@ export default class NewsCardList {
     // this.data = data;
     // this.render = this.render.bind(this);
 
-    const cardList = document.createElement('div');
-    cardList.classList.add('results__content, news');
+    // const cardList = document.createElement('div');
+    // cardList.classList.add('results__content, news');
 
   }
 
   render() {
     console.log(localStorage.length);
-    if (localStorage.length === 0) {
-      // блок ничего не найдено
-    }
-    else if (localStorage.length >= 3) {
-      newsCard = new NewsCard();
+    if(localStorage.length) {
+      const newsCard = new NewsCard();
       newsCard.create();
     }
+    // if (localStorage.length === 0) {
+    //   // блок ничего не найдено
+    // }
+    // else if (localStorage.length >= 3) {
+    //   newsCard = new NewsCard();
+    //   newsCard.create();
+    // }
 
-    else {
-      // кнопка показать ещё
-    }
+    // else {
+    //   // кнопка показать ещё
+    // }
   }
 
 

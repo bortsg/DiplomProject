@@ -21,7 +21,6 @@ function showResultsBlock() {
   document.querySelector('.results__content').setAttribute('style', 'display:none');
   document.querySelector('.results__analytics').setAttribute('style', 'display:none');
   document.querySelector('.results__show-more').setAttribute('style', 'display:none');
-  document.querySelector('.not-found').setAttribute('style', 'display:none');
 }
 
 function hideResultsBlock() {
