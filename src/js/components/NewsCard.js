@@ -41,10 +41,10 @@ export default class NewsCard {
     
     console.log(elem);
 
-    document.querySelector('.results').appendChild(elem);
+    document.querySelector('.results__content').appendChild(elem);
 
     document.querySelector('.results').setAttribute('style', 'display:flex');
-    document.querySelector('.results__content').setAttribute('style', 'display:flex');
+    document.querySelector('.results__content').setAttribute('style', 'display:grid');
     document.querySelector('.results__analytics').setAttribute('style', 'display:flex');
     document.querySelector('.results__show-more').setAttribute('style', 'display:inline');
     
