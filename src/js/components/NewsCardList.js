@@ -11,7 +11,7 @@ export default class NewsCardList {
   }
 
   render() {
-    console.log(localStorage.length);
+    // console.log(localStorage.length);
     if(localStorage.length) {
       const newsCard = new NewsCard();
       newsCard.create();
