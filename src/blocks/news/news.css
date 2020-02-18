@@ -64,6 +64,13 @@
   max-width: 352px;
   height: 60px;
   margin: 12px 24px 16px 24px;
+
+  
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  
 }
 
 .news-item__description {
@@ -75,6 +82,11 @@
   max-width: 352px;
   height: 110px;
   margin: 16px 24px 18px 24px;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 
 .news-item__source {

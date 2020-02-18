@@ -25,7 +25,7 @@ export default class NewsCard {
 
     const newsTitle = document.createElement('h3');
     newsTitle.classList.add('news-item__title');
-    newsTitle.textContent = JSON.parse(localStorage.getItem(0)).title;
+    newsTitle.textContent = JSON.parse(localStorage.getItem(1)).title;
     card.appendChild(newsTitle);
 
     const newsDescription = document.createElement('p');
