@@ -19,8 +19,6 @@ export default class NewsApi {
 
   // метод getNews получает список новостей по заданному слову, и записывает их в localStorage
   getNews(searchInput){
-    // this.searchInput = this.searchInput;
-    // const searchInput = document.querySelector('.search__input').value;
 
     return fetch(`${apiData.url}q=${searchInput}&${apiData.urlParam}`, {
       method: 'GET'
@@ -28,7 +26,6 @@ export default class NewsApi {
     .then(function (res) {
       if (res.ok) {
         // showResultsBlock();
-        // console.log('ok');
         return res.json();
       }
       return Promise.reject(`Код ошибки: ${res.status}`);
@@ -39,20 +36,13 @@ export default class NewsApi {
         // showNotFoundResults(); // если ничего не найдено
       }
 
-      // console.log(data.articles);
 
-      localStorage.clear();
       for (let i=0; i< data.articles.length; i++) {
         localStorage.setItem([i], JSON.stringify(data.articles[i]));
       }
 
       return data.articles;
-      // createCard(data);
-      // showCards();
     })
-    // .then( () => {
-    //   console.log('fetch otrabotal');
-    // })
     .catch((err) => {
       console.log(err);
       // showErrorResults();
