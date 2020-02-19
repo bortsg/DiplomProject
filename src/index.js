@@ -153,7 +153,7 @@ document.querySelector('.search__field').addEventListener('submit', () => {
 
       hidePreloader();
 
-      console.log(data);
+      // console.log(data);
       const newsCardList = new NewsCardList();
       newsCardList.render();
     });

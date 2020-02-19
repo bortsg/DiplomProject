@@ -117,7 +117,7 @@
 
 @media (min-width: 768px) and (max-width: 1439px) {
   .news {
-    height: 420px;
+    /* height: 420px; */
     /* max-width: 688px; */
     width: 90%;
     justify-content: space-between;
@@ -144,7 +144,7 @@
 
   .news-item__date {
     margin: 16px auto 0 16px;
-    max-width: 128px;
+    max-width: 168px;
     height: 24px;
   }
 
@@ -191,8 +191,6 @@
     overflow: hidden;
   }
 
-
-
   .news-item {
     max-width: 288px;
     height: 446px;
@@ -206,7 +204,7 @@
 
   .news-item__date {
     margin: 12px auto 0 16px;
-    max-width: 128px;
+    max-width: 168px;
     height: 24px;
   }
 
