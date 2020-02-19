@@ -53,6 +53,7 @@ export default class NewsCard {
   }
 
   create() {
+    
     let k=0;
     this.draw(k);
     this.checkForButton(k);

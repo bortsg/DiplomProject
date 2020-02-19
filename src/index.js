@@ -140,6 +140,10 @@ document.querySelector('.search__field').addEventListener('submit', () => {
 
   localStorage.clear();
 
+  // очистка уже отрисованных карточек по предыдушему запросу
+  while (document.querySelector('.results__content').firstElementChild !== document.querySelector('.results__content').lastElementChild )
+    document.querySelector('.results__content').lastElementChild.remove();
+
   // validateForm();
 
   const searchInput = document.querySelector('.search__input').value;

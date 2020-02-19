@@ -41,6 +41,7 @@ export default class NewsApi {
 
       // console.log(data.articles);
 
+      localStorage.clear();
       for (let i=0; i< data.articles.length; i++) {
         localStorage.setItem([i], JSON.stringify(data.articles[i]));
       }
