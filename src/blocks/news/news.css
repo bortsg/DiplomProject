@@ -51,9 +51,9 @@
   font-size: 18px;
   line-height: 24px;
   color: #B6BCBF;
-  max-width: 128px;
+  max-width: 228px;
   height: 24px;
-  margin: 20px 248px 0px 24px;
+  margin: 20px auto 0px 24px;
 }
 
 .news-item__title {
