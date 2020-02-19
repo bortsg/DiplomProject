@@ -41,21 +41,60 @@ export default class NewsCard {
     }
   }
 
+  checkForButton(k) {
+    // 0+3k 1+3k 2+3k
+    // 3+3k 4+3k 5+3k
+    if (localStorage.getItem(2+3*k +3)) {
+      document.querySelector('.results__show-more').setAttribute('style', 'display:inline');
+    } else {
+      document.querySelector('.results__show-more').setAttribute('style', 'display:none')
+      // document.querySelector('.results').setAttribute('style', 'margin-bottom: 64px;');
+      document.querySelector('.news').style.marginBottom = '64px';
+    };
+  }
+
   create() {
     let k=0;
     this.draw(k);
+    this.checkForButton(k);
 
-    if ( k < 2) {
-      document.querySelector('.results__show-more').setAttribute('style', 'display:inline');
+    // function callme() {
+    //   k=k+1;
+    //   this.draw = this.draw.bind(this);
+    //   this.draw(k);
+    // }
+
+    if ( k < Math.floor(localStorage.length / 3)) {
+      console.log(k);
+      // document.querySelector('.results__show-more').setAttribute('style', 'display:inline');
       document.querySelector('.results__show-more').addEventListener('click', () => {
-        console.log(k);
-        k = k+1;
-        this.draw(k);
-      })
+        if ((k <  Math.floor(localStorage.length / 3)) && (localStorage.getItem(2+3*k))) {
+
+          console.log(k);
+          console.log((Math.floor(localStorage.length / 3)));
+          console.log(localStorage.getItem(2+3*k+1));
+
+          k = k+1;
+          this.draw(k);
+          this.checkForButton(k-1);
+
+        } else if (!localStorage.getItem(2+3*k+3)) {
+          // document.querySelector('.results__show-more').setAttribute('style', 'display:none');
+          // document.querySelector('.results').setAttribute('style', 'margin-bottom: 64px;');
+        }
+      });
+
+      // document.querySelector('.results__show-more').removeEventListener('click', () => {
+      //   k = k+1;
+      //   this.draw(k);
+      // });
+
+
+      // document.querySelector('.results__show-more').setAttribute('style', 'display:none');
     } else {
-      console.log('hopa');
+      // console.log('hopa');
       // document.querySelector('.results__show-more').removeEventListener();
-      document.querySelector('.results__show-more').setAttribute('style', 'display:none');
+      // document.querySelector('.results__show-more').setAttribute('style', 'display:none');
     }
 
     document.querySelector('.results').setAttribute('style', 'display:flex');
