@@ -25,9 +25,7 @@ document.querySelector('.analytics__mentions_volume').textContent = titleResults
 // подготовим названия колонок в гистограмме
 
 const data = JSON.parse(localStorage.getItem(0)).publishedAt;
-// console.log(data);
 const dataInFormat = new Date(data.slice(0,10)); // отбрасываем время (часы-минуты) от даты
-
 // console.log(dataInFormat.getMonth()); //месяц (0 соотв январю)
 // console.log(dataInFormat.getDay()); // день недели, 0 соотв. воскресенью
 // console.log(dataInFormat.getDate()); // число месяца, от 1 до 31
@@ -38,7 +36,7 @@ const monthList = ['ЯНВАРЬ', 'ФЕВРАЛЬ', 'МАРТ', 'АПРЕЛЬ',
 
 // проверяем месяц на текущий момент и 7 дней ранее
 const now = new Date(); //отсчёт новостей от текущей даты
-const dayPrevious = 21; // за последние 7 дней
+const dayPrevious = 7; // за последние 7 дней
 const dayInMilliseconds = 24*60*60*1000;
 const before = new Date(now.getTime() - (dayPrevious-1)*dayInMilliseconds); // already in milliseconds
 const monthNow = now.getMonth();
@@ -50,19 +48,45 @@ if (monthNow  === monthBefore) {
 } else {
   monthColumnName = monthList[monthBefore] + '-' + monthList[monthNow];
 }
-// console.log(monthColumnName);
 
 document.querySelector('.diagram__column-name').textContent = 'ДАТА (' + monthColumnName + ')';
 
 
-// запись дня недели в колонке гистограммы
+// подсчёт длины горизонтальной полосы диаграммы
+let diagramValue = new Array(0,0,0,0,0,0,0);
 
-// const dateBefore = before.getDate() + ', ' + daysList[before.getDay()];
+// запись дня недели в колонке гистограммы
 const obj   = Array.from(document.querySelectorAll('.diagram__date'));
+
 for (let i = 0; i< 7; i++) {
   const day = new Date(before.getTime() + i*dayInMilliseconds) ; // день месяца надо вычислять заново, т.к. можно перевалить за месяц
   obj[i].textContent = day.getDate() + ', ' + daysList[(before.getDay() + i) % 7]; /// массив дней от 0 до 6, надо брать по модулю 7
-  console.log(obj[i].textContent);
+
+  for (let k=0; k < localStorage.length - 2 ; k++) { // в localstorage записывается ещё техническая строка от вебпака, плюс я пишу строку с поисковым запросом
+    if ( JSON.parse(localStorage.getItem(k)).publishedAt) {
+      const sorted = (JSON.parse(localStorage.getItem(k)).publishedAt).slice(0,10); 
+      if (new Date(sorted).getDate()  === day.getDate()) {
+        diagramValue[i]++;
+      }
+    }
+  }
 }
 
-// подсчёт длины горизонтальной полосы диаграммы
+console.log(diagramValue);
+
+for (let i=0; i < 7; i++) {
+  const obbj = document.querySelectorAll('.diagram__value');
+  if (diagramValue[i]) {
+    obbj[i].textContent = diagramValue[i];
+    obbj[i].style.width = diagramValue[i] +'%';
+  } else {
+    obbj[i].textContent = diagramValue[i];
+    obbj[i].style.width = '1%';
+  }
+  
+}
+// console.log(diagramValue);
+// document.querySelector('.diagram__value_mnd').textContent = diagramValue[0];
+// document.querySelector('.diagram__value_mnd').style.width = diagramValue[0] +'%'; //'${diagramValue(1)}';
+
+
