@@ -1,5 +1,7 @@
 import "./about.css";
 import Glide from '@glidejs/glide';
+import GitHubApi from '../js/modules/GithubApi';
+
 
 new Glide('.glide', {
     // type: 'slider',
@@ -18,3 +20,10 @@ new Glide('.glide', {
         focusAt: 1     }
     }
   }).mount()
+
+
+
+
+
+  const gitApi = new GitHubApi();
+  gitApi.getCommitStory();

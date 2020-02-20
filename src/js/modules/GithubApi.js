@@ -1,8 +1,12 @@
-class GitHubApi {
+const gitHubUrl = 'https://api.github.com/repos/bortsgDiplomProject.github.io/commits';
+
+
+export default class GitHubApi {
   constructor () {
+
   }
 
-  getHistory () {
+  getCommitStory () {
     return fetch(`${this._url}`, {
       method: 'GET',
       headers: {
@@ -12,7 +16,8 @@ class GitHubApi {
     })
     .then(res => {
       if(res.ok) {
-        return res.json();
+        console.log('git api ok');
+        return res.json();        
       }
       return Promise.reject(res.status);
     })
