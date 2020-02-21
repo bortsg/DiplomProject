@@ -41,10 +41,10 @@
       <!-- </picture> -->
     </div>
 
-    <div class="preloader">
+    <!-- <div class="preloader">
       <i class="preloader__circle"></i>
       <p class="preloader__text">Идет поиск новостей...</p>
-    </div>
+    </div> -->
 
     <section class="not-found">
       <img src="<%=require('./images/not-found.svg').default%>" class="not-found__image" alt="not-found image">
@@ -58,6 +58,12 @@
         <h2 class="results__title">Результаты поиска</h2>
         <a href="./analytics.html" class="results__analytics">Посмотреть аналитику ></a>
       </div>
+
+      <div class="preloader">
+        <i class="preloader__circle"></i>
+        <p class="preloader__text">Идет поиск новостей...</p>
+      </div>
+  
 
       <p class="results__error">Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз</p>
 

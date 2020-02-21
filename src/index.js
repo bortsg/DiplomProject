@@ -48,17 +48,22 @@ function showErrorResults() {
   document.querySelector('.results__error').setAttribute('style', 'display: block');
 }
 
-function hideResultsTitle() {
-  document.querySelector('.results__title').setAttribute('style', 'display:none');
+function hideErrorResults() {
+  // в окне результатов выводится надпись «Во время запроса произошла ошибка. Возможно, проблема
+  // с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз».
+  document.querySelector('.results__error').setAttribute('style', 'display: none');
 }
 
+function hideResultsTitle() {
+  document.querySelector('.results__header').setAttribute('style', 'display: none');
+}
+
+
 if (localStorage.getItem('searchInput')) {
-  console.log('непусто!');
   showResultsBlock();
   hidePreloader();
   hideNotFound();
-  const newsCard = new NewsCard();
-  
+  const newsCard = new NewsCard();  
   newsCard.create();
 } else {
   hideResultsBlock();
@@ -71,14 +76,18 @@ if (localStorage.getItem('searchInput')) {
 document.querySelector('.search__field').addEventListener('submit', () => {
   event.preventDefault();
 
+  hideErrorResults()
   showPreloader();
   showResultsBlock();
 
   localStorage.clear();
 
   // очистка уже отрисованных карточек по предыдушему запросу
-  while (document.querySelector('.results__content').firstElementChild !== document.querySelector('.results__content').lastElementChild )
+  while (document.querySelector('.results__content').firstElementChild !== document.querySelector('.results__content').lastElementChild ) {
     document.querySelector('.results__content').lastElementChild.remove();
+    localStorage.clear();
+  }
+    
 
   // validateForm();
 
@@ -105,6 +114,7 @@ document.querySelector('.search__field').addEventListener('submit', () => {
       hideResultsTitle();
       showErrorResults();
       hidePreloader();
+      localStorage.clear();
 
       return Promise.reject(`Код ошибки: ${err}`);
     });

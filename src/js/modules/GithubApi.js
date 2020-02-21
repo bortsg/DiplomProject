@@ -45,6 +45,7 @@ export default class GitHubApi {
       const commiterPhoto = document.createElement('img');
       commiterPhoto.classList.add('phrase-block__photo');
       commiterPhoto.setAttribute('src', data[i].author.avatar_url);
+      commiterPhoto.setAttribute('alt', "quote ava");
       commitPerson.appendChild(commiterPhoto);
 
       const commiterName = document.createElement('p');
