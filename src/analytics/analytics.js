@@ -1,6 +1,5 @@
 import "./analytics.css";
 
-// console.log(localStorage.getItem('searchInput'));
 const searchInput = localStorage.getItem('searchInput');
 
 document.querySelector('.analytics__theme').textContent = '«' + searchInput[0].toUpperCase() + searchInput.slice(1) + '»';
@@ -56,37 +55,33 @@ document.querySelector('.diagram__column-name').textContent = 'ДАТА (' + mon
 let diagramValue = new Array(0,0,0,0,0,0,0);
 
 // запись дня недели в колонке гистограммы
-const obj   = Array.from(document.querySelectorAll('.diagram__date'));
+const diagramDates  = Array.from(document.querySelectorAll('.diagram__date'));
 
 for (let i = 0; i< 7; i++) {
   const day = new Date(before.getTime() + i*dayInMilliseconds) ; // день месяца надо вычислять заново, т.к. можно перевалить за месяц
-  obj[i].textContent = day.getDate() + ', ' + daysList[(before.getDay() + i) % 7]; /// массив дней от 0 до 6, надо брать по модулю 7
+  diagramDates[i].textContent = day.getDate() + ', ' + daysList[(before.getDay() + i) % 7]; /// массив дней от 0 до 6, надо брать по модулю 7
 
   for (let k=0; k < localStorage.length - 2 ; k++) { // в localstorage записывается ещё техническая строка от вебпака, плюс я пишу строку с поисковым запросом
     if ( JSON.parse(localStorage.getItem(k)).publishedAt) {
-      const sorted = (JSON.parse(localStorage.getItem(k)).publishedAt).slice(0,10); 
-      if (new Date(sorted).getDate()  === day.getDate()) {
+      const sortedDate = (JSON.parse(localStorage.getItem(k)).publishedAt).slice(0,10);
+      if (new Date(sortedDate).getDate()  === day.getDate()) {
         diagramValue[i]++;
       }
     }
   }
 }
 
-console.log(diagramValue);
-
+// заполним длины гориз.столбцов
 for (let i=0; i < 7; i++) {
-  const obbj = document.querySelectorAll('.diagram__value');
+  const diagramValues = document.querySelectorAll('.diagram__value');
   if (diagramValue[i]) {
-    obbj[i].textContent = diagramValue[i];
-    obbj[i].style.width = diagramValue[i] +'%';
-  } else {
-    obbj[i].textContent = diagramValue[i];
-    obbj[i].style.width = '1%';
+    diagramValues[i].textContent = diagramValue[i];
+    diagramValues[i].style.width = diagramValue[i] +'%';
+  } else { //заглушка на случай если не было статей, но чтобы отображался столбец со значением 0
+    diagramValues[i].textContent = diagramValue[i];
+    diagramValues[i].style.width = '1%';
   }
-  
+
 }
-// console.log(diagramValue);
-// document.querySelector('.diagram__value_mnd').textContent = diagramValue[0];
-// document.querySelector('.diagram__value_mnd').style.width = diagramValue[0] +'%'; //'${diagramValue(1)}';
 
 
