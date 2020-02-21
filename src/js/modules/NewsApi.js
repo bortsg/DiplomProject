@@ -14,7 +14,7 @@
 
 export default class NewsApi {
   constructor() {
-
+    
   }
 
   // метод getNews получает список новостей по заданному слову, и записывает их в localStorage
@@ -25,18 +25,11 @@ export default class NewsApi {
     })
     .then(function (res) {
       if (res.ok) {
-        // showResultsBlock();
         return res.json();
       }
       return Promise.reject(`Код ошибки: ${res.status}`);
     })
-    .then((data) => {
-
-      if (data.totalResults===0) {
-        // showNotFoundResults(); // если ничего не найдено
-      }
-
-
+    .then((data) => {            
       for (let i=0; i< data.articles.length; i++) {
         localStorage.setItem([i], JSON.stringify(data.articles[i]));
       }
@@ -44,13 +37,11 @@ export default class NewsApi {
       return data.articles;
     })
     .catch((err) => {
-      console.log(err);
-      // showErrorResults();
+      // alert(err);
     });
   }
 }
 
-// export default NewsApi
 
 
 

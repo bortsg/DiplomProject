@@ -1,9 +1,10 @@
 import "./analytics.css";
 
+// заголовок темы поиска
 const searchInput = localStorage.getItem('searchInput');
-
 document.querySelector('.analytics__theme').textContent = '«' + searchInput[0].toUpperCase() + searchInput.slice(1) + '»';
 
+// подсчёт статей в заголовках и описании статей
 let titleResults = 0;
 let descriptionResults = 0;
 for (let i=0; i< localStorage.length - 2 ; i++) {
@@ -22,7 +23,6 @@ document.querySelector('.analytics__mentions_volume').textContent = titleResults
 
 
 // подготовим названия колонок в гистограмме
-
 const data = JSON.parse(localStorage.getItem(0)).publishedAt;
 const dataInFormat = new Date(data.slice(0,10)); // отбрасываем время (часы-минуты) от даты
 // console.log(dataInFormat.getMonth()); //месяц (0 соотв январю)
@@ -51,7 +51,7 @@ if (monthNow  === monthBefore) {
 document.querySelector('.diagram__column-name').textContent = 'ДАТА (' + monthColumnName + ')';
 
 
-// подсчёт длины горизонтальной полосы диаграммы
+// подсчёт длины горизонтальной полосы диаграммы, на 7 дней
 let diagramValue = new Array(0,0,0,0,0,0,0);
 
 // запись дня недели в колонке гистограммы

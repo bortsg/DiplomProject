@@ -42,8 +42,6 @@ export default class NewsCard {
   }
 
   checkForButton(k) {
-    // 0+3k 1+3k 2+3k
-    // 3+3k 4+3k 5+3k
     if (localStorage.getItem(2+3*k +3)) {
       document.querySelector('.results__show-more').setAttribute('style', 'display:inline');
     } else {
@@ -53,7 +51,6 @@ export default class NewsCard {
   }
 
   create() {
-    // console.log(localStorage.length);
     let k=0;
     this.draw(k);
     this.checkForButton(k);

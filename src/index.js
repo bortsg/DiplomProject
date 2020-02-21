@@ -1,6 +1,8 @@
 import "./pages/index.css"
 import NewsApi from './js/modules/NewsApi.js'
 import NewsCardList from './js/components/NewsCardList'
+import NewsCard from './js/components/NewsCard'
+ 
 
 
 function validateForm() {
@@ -43,12 +45,27 @@ function hideNotFound() {
 function showErrorResults() {
   // в окне результатов выводится надпись «Во время запроса произошла ошибка. Возможно, проблема
   // с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз».
+  document.querySelector('.results__error').setAttribute('style', 'display: block');
 }
 
+function hideResultsTitle() {
+  document.querySelector('.results__title').setAttribute('style', 'display:none');
+}
 
-hideResultsBlock();
-hidePreloader();
-hideNotFound();
+if (localStorage.getItem('searchInput')) {
+  console.log('непусто!');
+  showResultsBlock();
+  hidePreloader();
+  hideNotFound();
+  const newsCard = new NewsCard();
+  
+  newsCard.create();
+} else {
+  hideResultsBlock();
+  hidePreloader();
+  hideNotFound();
+}
+
 
 
 document.querySelector('.search__field').addEventListener('submit', () => {
@@ -66,16 +83,31 @@ document.querySelector('.search__field').addEventListener('submit', () => {
   // validateForm();
 
   const searchInput = document.querySelector('.search__input').value;
-  localStorage.setItem('searchInput', searchInput);
+  localStorage.setItem('searchInput', searchInput); // сохраним тему поиска, чтобы выводить её в Аналитике
 
   const newsApi = new NewsApi();
   newsApi.getNews(searchInput)
     .then ( (data) => {
+      if (!data.length){ 
+        hidePreloader();        
+        hideResultsBlock();
+        showNotFound();
+        localStorage.clear();
+      } else {     
       hidePreloader();
+      hideNotFound();
+
       const newsCardList = new NewsCardList();
       newsCardList.render();
-    });
+      }
+    })
+    .catch( (err) => {
+      hideResultsTitle();
+      showErrorResults();
+      hidePreloader();
 
+      return Promise.reject(`Код ошибки: ${err}`);
+    });
 });
 
 
