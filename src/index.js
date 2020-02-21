@@ -58,7 +58,15 @@ function hideResultsTitle() {
   document.querySelector('.results__header').setAttribute('style', 'display: none');
 }
 
+function disableSearchButton() {
+  document.querySelector('.search__button').setAttribute('disabled', true);
+}
 
+function enableSearchButton() {
+  document.querySelector('.search__button').removeAttribute('disabled');
+}
+
+// отрисуем карточки по уже спрошенной теме - searchInput, если попадаем на главную страницу повторно, после просмотра аналитики например
 if (localStorage.getItem('searchInput')) {
   showResultsBlock();
   hidePreloader();
@@ -75,19 +83,18 @@ if (localStorage.getItem('searchInput')) {
 
 document.querySelector('.search__field').addEventListener('submit', () => {
   event.preventDefault();
-
+  disableSearchButton();
+  
   hideErrorResults()
   showPreloader();
   showResultsBlock();
-
   localStorage.clear();
 
   // очистка уже отрисованных карточек по предыдушему запросу
   while (document.querySelector('.results__content').firstElementChild !== document.querySelector('.results__content').lastElementChild ) {
     document.querySelector('.results__content').lastElementChild.remove();
     localStorage.clear();
-  }
-    
+  }    
 
   // validateForm();
 
@@ -102,9 +109,11 @@ document.querySelector('.search__field').addEventListener('submit', () => {
         hideResultsBlock();
         showNotFound();
         localStorage.clear();
+        enableSearchButton();
       } else {     
       hidePreloader();
       hideNotFound();
+      enableSearchButton();
 
       const newsCardList = new NewsCardList();
       newsCardList.render();
@@ -115,9 +124,10 @@ document.querySelector('.search__field').addEventListener('submit', () => {
       showErrorResults();
       hidePreloader();
       localStorage.clear();
+      enableSearchButton();
 
       return Promise.reject(`Код ошибки: ${err}`);
-    });
+    })    
 });
 
 

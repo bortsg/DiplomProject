@@ -79,9 +79,9 @@ for (let i=0; i < 7; i++) {
     diagramValues[i].style.width = diagramValue[i] +'%';
   } else { //заглушка на случай если не было статей, но чтобы отображался столбец со значением 0
     diagramValues[i].textContent = diagramValue[i];
-    diagramValues[i].style.width = '1%';
+    diagramValues[i].style.width = '2%';
+    diagramValues[i].setAttribute('style', 'max-width: 10px');
   }
-
 }
 
 

@@ -2,6 +2,7 @@ export default class NewsCard {
   constructor() {
   }
 
+  // функция отрисовки трёх карточек
   draw(k) {
     for (let i=0; i<3; i++) {
       // добавить функцию проверки наличия, и корректности картинки изображения новости
@@ -41,6 +42,7 @@ export default class NewsCard {
     }
   }
 
+  // проверим, надо ли рисовать кнопку Показать ещё
   checkForButton(k) {
     if (localStorage.getItem(2+3*k +3)) {
       document.querySelector('.results__show-more').setAttribute('style', 'display:inline');
@@ -50,11 +52,13 @@ export default class NewsCard {
     };
   }
 
+
   create() {
     let k=0;
     this.draw(k);
     this.checkForButton(k);
 
+    //рисуем очередную тройку новостей
     if ( k < Math.floor(localStorage.length / 3)) {
       document.querySelector('.results__show-more').addEventListener('click', () => {
         if ((k <  Math.floor(localStorage.length / 3)) && (localStorage.getItem(2+3*k))) {
