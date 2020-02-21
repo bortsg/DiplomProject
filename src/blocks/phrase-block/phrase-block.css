@@ -59,6 +59,9 @@
 
 .phrase-block__photo {
   grid-area: photo;
+
+  width: 48px;
+  height: 48px;
 }
 
 

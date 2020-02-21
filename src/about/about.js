@@ -1,10 +1,18 @@
 import "./about.css";
 import Glide from '@glidejs/glide';
+import GitHubApi from '../js/modules/GithubApi';
 
-new Glide('.glide', {
-    // type: 'slider',
-    // startAt: 0,
-    // perView: 3.5,
+
+const gitApi = new GitHubApi();
+gitApi.getCommitStory()
+  .then((data) => {
+    if (data.length >= 1) {
+      gitApi.drawCommit(data);
+    }
+  })
+  .then(() => {
+    
+    new Glide('.glide', {
     type: 'carousel',
     perView: 3.4,
     focusAt: 'center',
@@ -16,5 +24,17 @@ new Glide('.glide', {
       767: {
         perView: 1,
         focusAt: 1     }
-    }
-  }).mount()
+      }
+    }).mount()
+
+  })
+  .catch(err => {
+    alert(`${err}: ${err.status}`);
+    console.log(`${err}: ${res.status}`);
+  });;
+
+
+
+
+
+

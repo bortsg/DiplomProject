@@ -41,10 +41,10 @@
       <!-- </picture> -->
     </div>
 
-    <div class="preloader">
+    <!-- <div class="preloader">
       <i class="preloader__circle"></i>
       <p class="preloader__text">Идет поиск новостей...</p>
-    </div>
+    </div> -->
 
     <section class="not-found">
       <img src="<%=require('./images/not-found.svg').default%>" class="not-found__image" alt="not-found image">
@@ -59,68 +59,27 @@
         <a href="./analytics.html" class="results__analytics">Посмотреть аналитику ></a>
       </div>
 
-      <div class="results__content news">
-        <article class="news-item">
-          <img src="<%=require('./images/image_08.jpg').default%>" alt="news image" class="news-item__image">
-          <div class="news-item__date"> 2 августа, 2019</div>
-          <h3 class="news-item__title">Национальное достояние - парки</h3>
-          <p class="news-item__description"> В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
-            начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый
-            может приобщиться к природе</p>
-          <a href="www.lenta.ru"  class="news-item__source">Лента.ру</a>
-        </article>
-
-        <article class="news-item">
-          <img src="<%=require('./images/image_08.jpg').default%>" alt="news image" class="news-item__image">
-          <div class="news-item__date"> 2 августа, 2019</div>
-          <h3 class="news-item__title">Национальное достояние - парки</h3>
-          <p class="news-item__description"> В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
-            начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый
-            может приобщиться к природе</p>
-          <a href="www.lenta.ru"  class="news-item__source">Лента.ру</a>
-        </article>
-
-        <article class="news-item">
-          <img src="<%=require('./images/image_08.jpg').default%>" alt="news image" class="news-item__image">
-          <div class="news-item__date"> 2 августа, 2019</div>
-          <h3 class="news-item__title">Национальное достояние - парки</h3>
-          <p class="news-item__description"> В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
-            начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый
-            может приобщиться к природе</p>
-          <a href="www.lenta.ru"  class="news-item__source">Лента.ру</a>
-        </article>
-
-        <article class="news-item">
-          <img src="<%=require('./images/image_08.jpg').default%>" alt="news image" class="news-item__image">
-          <div class="news-item__date"> 2 августа, 2019</div>
-          <h3 class="news-item__title">Национальное достояние - парки</h3>
-          <p class="news-item__description"> В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
-            начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый
-            может приобщиться к природе</p>
-          <a href="www.lenta.ru"  class="news-item__source">Лента.ру</a>
-        </article>
-
-        <article class="news-item">
-          <img src="<%=require('./images/image_08.jpg').default%>" alt="news image" class="news-item__image">
-          <div class="news-item__date"> 2 августа, 2019</div>
-          <h3 class="news-item__title">Национальное достояние - парки</h3>
-          <p class="news-item__description"> В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
-            начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый
-            может приобщиться к природе</p>
-          <a href="www.lenta.ru"  class="news-item__source">Лента.ру</a>
-        </article>
-
-        <article class="news-item">
-          <img src="<%=require('./images/image_08.jpg').default%>" alt="news image" class="news-item__image">
-          <div class="news-item__date"> 2 августа, 2019</div>
-          <h3 class="news-item__title">Национальное достояние - парки</h3>
-          <p class="news-item__description"> В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
-            начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый
-            может приобщиться к природе</p>
-          <a href="www.lenta.ru"  class="news-item__source">Лента.ру</a>
-        </article>
-
+      <div class="preloader">
+        <i class="preloader__circle"></i>
+        <p class="preloader__text">Идет поиск новостей...</p>
       </div>
+  
+
+      <p class="results__error">Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз</p>
+
+      <section class="results__content news">
+        <template id="templ">
+          <article class="news-item">
+            <img src="<%=require('./images/image_08.jpg').default%>" alt="Новостная иллюстрация" class="news-item__image">
+            <div class="news-item__date"> 2 августа, 2019</div>
+            <h3 class="news-item__title">Национальное достояние - парки</h3>
+            <p class="news-item__description"> В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
+              начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый
+              может приобщиться к природе</p>
+            <a href="www.lenta.ru"  class="news-item__source" target="blank">Лента.ру</a>
+          </article>
+        </template>
+      </section>
 
       <button type="submit" class="results__show-more">Показать ещё</button>
 
@@ -144,17 +103,17 @@
     </section>
 
     <footer class="footer">
-      <a href="" class="footer__copyright">&copy; 2019 Supersite</a>
+      <a href="" class="footer__copyright" target="blank">&copy; 2019 Supersite</a>
 
       <ul class="footer__navigation">
         <li> <a href="./index.html" class="footer__links footer__links_main">Главная</a> </li>
         <li> <a href="./about.html" class="footer__links footer__links_about">О проекте</a> </li>
-        <li> <a href="https://praktikum.yandex.ru" class="footer__links footer__links_company">Яндекс.Практикум</a> </li>
+        <li> <a href="https://praktikum.yandex.ru" class="footer__links footer__links_company" target="blank">Яндекс.Практикум</a> </li>
       </ul>
 
       <div class="footer__icons">
-        <a href="https://github.com" class="footer__icon"> </a>
-        <a href="https://facebook.com" class="footer__icon"> </a>
+        <a href="https://github.com/bortsg" class="footer__icon" target="blank"> </a>
+        <a href="https://facebook.com" class="footer__icon" target="blank"> </a>
       </div>
     </footer>
 
