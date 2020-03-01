@@ -2,7 +2,7 @@ import "./pages/index.css"
 import NewsApi from './js/modules/NewsApi.js'
 import NewsCardList from './js/components/NewsCardList'
 import NewsCard from './js/components/NewsCard'
- 
+
 
 
 function validateForm() {
@@ -49,8 +49,6 @@ function showErrorResults() {
 }
 
 function hideErrorResults() {
-  // в окне результатов выводится надпись «Во время запроса произошла ошибка. Возможно, проблема
-  // с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз».
   document.querySelector('.results__error').setAttribute('style', 'display: none');
 }
 
@@ -59,10 +57,14 @@ function hideResultsTitle() {
 }
 
 function disableSearchButton() {
+  //сделаем неактивной кнопку поиска сразу после ввода запроса
+  document.querySelector('.search__input').setAttribute('disabled', true);
   document.querySelector('.search__button').setAttribute('disabled', true);
+
 }
 
 function enableSearchButton() {
+  document.querySelector('.search__input  ').removeAttribute('disabled');
   document.querySelector('.search__button').removeAttribute('disabled');
 }
 
@@ -71,8 +73,9 @@ if (localStorage.getItem('searchInput')) {
   showResultsBlock();
   hidePreloader();
   hideNotFound();
-  const newsCard = new NewsCard();  
-  newsCard.create();
+  document.querySelector('.search__input').value = localStorage.getItem('searchInput');
+  const newsCardOld = new NewsCard();
+  newsCardOld.create();
 } else {
   hideResultsBlock();
   hidePreloader();
@@ -82,9 +85,14 @@ if (localStorage.getItem('searchInput')) {
 
 
 document.querySelector('.search__field').addEventListener('submit', () => {
+
+  console.log('submit button');
+
+  document.querySelector('.results__show-more').addEventListener('click', function handler() {})
+
   event.preventDefault();
   disableSearchButton();
-  
+
   hideErrorResults()
   showPreloader();
   showResultsBlock();
@@ -94,7 +102,7 @@ document.querySelector('.search__field').addEventListener('submit', () => {
   while (document.querySelector('.results__content').firstElementChild !== document.querySelector('.results__content').lastElementChild ) {
     document.querySelector('.results__content').lastElementChild.remove();
     localStorage.clear();
-  }    
+  }
 
   // validateForm();
 
@@ -104,13 +112,13 @@ document.querySelector('.search__field').addEventListener('submit', () => {
   const newsApi = new NewsApi();
   newsApi.getNews(searchInput)
     .then ( (data) => {
-      if (!data.length){ 
-        hidePreloader();        
+      if (!data.length){
+        hidePreloader();
         hideResultsBlock();
         showNotFound();
         localStorage.clear();
         enableSearchButton();
-      } else {     
+      } else {
       hidePreloader();
       hideNotFound();
       enableSearchButton();
@@ -127,7 +135,7 @@ document.querySelector('.search__field').addEventListener('submit', () => {
       enableSearchButton();
 
       return Promise.reject(`Код ошибки: ${err}`);
-    })    
+    })
 });
 
 

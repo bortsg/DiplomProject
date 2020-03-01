@@ -4,6 +4,7 @@ export default class NewsCard {
 
   // функция отрисовки трёх карточек
   draw(k) {
+    console.log('draw pri k= ', k);
     for (let i=0; i<3; i++) {
       // добавить функцию проверки наличия, и корректности картинки изображения новости
       // console.log(fetch(JSON.parse(localStorage.getItem(i+3*k)).urlToImage, {method: 'GET'}) );
@@ -52,23 +53,35 @@ export default class NewsCard {
     };
   }
 
-
   create() {
-    let k=0;
+    let k = 0;
     this.draw(k);
     this.checkForButton(k);
+    const that = this;
 
-    //рисуем очередную тройку новостей
-    if ( k < Math.floor(localStorage.length / 3)) {
-      document.querySelector('.results__show-more').addEventListener('click', () => {
-        if ((k <  Math.floor(localStorage.length / 3)) && (localStorage.getItem(2+3*k))) {
-          k = k+1;
-          this.draw(k);
-          this.checkForButton(k-1);
-        }
-      });
+    function handler() {
+      console.log('that');
+      // console.log(window.getEventListeners( ));
+      // console.log( getEventListeners(document.querySelector('.results__show-more')) );
+
+      if ((k <  Math.floor(localStorage.length / 3)) && (localStorage.getItem(2+3*k))) {
+        k = k+1;
+        that.draw(k);
+      }
     }
 
+    //рисуем очередную тройку новостей
+    if (( k < Math.floor(localStorage.length / 3))) {
+      // document.querySelector('.results__show-more').addEventListener('click', function handler() {
+      //   if ((k <  Math.floor(localStorage.length / 3)) && (localStorage.getItem(2+3*k))) {
+      //     k = k+1;
+      //     that.draw(k);
+      //   }
+      // });
+
+      document.querySelector('.results__show-more').addEventListener('click', handler, false);
+      // document.querySelector('.results__show-more').removeEventListener('click', handler);
+    }
     document.querySelector('.results').setAttribute('style', 'display:flex');
     document.querySelector('.results__content').setAttribute('style', 'display:grid');
     document.querySelector('.results__analytics').setAttribute('style', 'display:flex');
